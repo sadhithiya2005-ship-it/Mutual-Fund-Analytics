@@ -1,0 +1,15 @@
+import pandas as pd
+df=pd.read_csv("C:/Users/ACER/OneDrive/Desktop/mutual_fund_analytics/data/raw/08_investor_transactions.csv")
+df["transaction_date"]=pd.to_datetime(df["transaction_date"])
+print(df.shape)
+print(df.info())
+print(df.dtypes)
+print(df.isnull().sum())
+print(df["transaction_type"].unique())
+print(df["transaction_type"].value_counts())
+print(df["kyc_status"].value_counts())
+invalid_amount=df[df["amount_inr"]<=0]
+print("Invalid Amount Records:", len(invalid_amount))
+print("Duplicate Rows:", df.duplicated().sum())
+df.to_csv("C:/Users/ACER/OneDrive/Desktop/mutual_fund_analytics/data/raw/08_investor_transactions.csv", index=False)
+print("Cleaned investor_transactions dataset saved successfully!")
