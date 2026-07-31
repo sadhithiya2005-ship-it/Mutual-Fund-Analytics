@@ -11,5 +11,9 @@ print(df["kyc_status"].value_counts())
 invalid_amount=df[df["amount_inr"]<=0]
 print("Invalid Amount Records:", len(invalid_amount))
 print("Duplicate Rows:", df.duplicated().sum())
-df.to_csv("C:/Users/ACER/OneDrive/Desktop/mutual_fund_analytics/data/raw/08_investor_transactions.csv", index=False)
+df.to_csv(
+    "C:/Users/ACER/OneDrive/Desktop/mutual_fund_analytics/data/processed/investor_transactions_cleaned.csv",
+    index=False
+)
+
 print("Cleaned investor_transactions dataset saved successfully!")
