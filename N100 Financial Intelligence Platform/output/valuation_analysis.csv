@@ -1,0 +1,110 @@
+company_id,company_name,year,market_cap_crore,enterprise_value_crore,pe_ratio,pb_ratio,ev_ebitda,dividend_yield_pct,company_roe_pct,roce_pct,pe_available,pb_available,ev_ebitda_available,pe_percentile,pb_percentile,ev_ebitda_percentile,pe_relative_band,pb_relative_band,ev_ebitda_relative_band
+ABB,Abbott India Ltd,Mar 2024,1536236.24,1619349.16,75.58,4.48,12.63,0.96,34.9,46.0,True,True,True,95.55555555555556,25.555555555555554,13.333333333333334,Higher relative valuation,Lower relative valuation,Lower relative valuation
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2024,348517.36,439276.19,58.5,9.05,14.83,1.65,8.59,9.0,True,True,True,73.33333333333333,61.111111111111114,16.666666666666664,Higher relative valuation,Middle relative valuation,Lower relative valuation
+ADANIENT,Adani Enterprises Ltd,Mar 2024,187927.97,191237.75,58.87,10.41,33.01,0.83,13.64,11.6,True,True,True,74.44444444444444,78.88888888888889,81.11111111111111,Higher relative valuation,Higher relative valuation,Higher relative valuation
+ADANIGREEN,Adani Green Energy Ltd,Mar 2024,510512.78,491878.9,45.26,6.24,21.78,0.89,14.7,96.5,True,True,True,48.888888888888886,41.11111111111111,40.0,Middle relative valuation,Middle relative valuation,Middle relative valuation
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2024,675598.01,611165.74,48.9,2.31,31.76,1.16,18.1,12.9,True,True,True,56.666666666666664,6.666666666666667,77.77777777777779,Middle relative valuation,Lower relative valuation,Higher relative valuation
+ADANIPOWER,Adani Power Ltd,Mar 2024,1372183.55,1357949.64,44.57,9.91,24.76,1.65,57.1,32.2,True,True,True,47.77777777777778,73.88888888888889,52.22222222222223,Middle relative valuation,Higher relative valuation,Middle relative valuation
+AMBUJACEM,Ambuja Cements Ltd,Mar 2024,1281411.04,1198290.68,55.62,9.21,27.67,3.1,9.24,12.8,True,True,True,67.77777777777779,62.22222222222222,63.33333333333333,Higher relative valuation,Middle relative valuation,Middle relative valuation
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2024,1905622.43,2433382.94,47.72,7.68,16.74,3.22,13.81,17.2,True,True,True,54.44444444444444,51.11111111111111,27.77777777777778,Middle relative valuation,Middle relative valuation,Lower relative valuation
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2024,2126725.18,2475080.63,73.37,3.9,23.94,2.42,31.45,41.75,True,True,True,94.44444444444444,16.666666666666664,47.77777777777778,Higher relative valuation,Lower relative valuation,Middle relative valuation
+AXISBANK,Axis Bank Ltd,Mar 2024,948868.63,929130.29,38.14,4.66,16.87,2.32,18.4,7.06,True,True,True,46.666666666666664,27.77777777777778,28.888888888888886,Middle relative valuation,Lower relative valuation,Lower relative valuation
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2024,653817.3,679803.97,29.91,9.83,20.14,3.59,26.5,33.5,True,True,True,26.666666666666668,71.11111111111111,34.44444444444444,Lower relative valuation,Higher relative valuation,Middle relative valuation
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2024,1905112.17,1807796.2,15.07,6.08,39.72,2.56,11.72,21.14,True,True,True,10.0,38.333333333333336,100.0,Lower relative valuation,Middle relative valuation,Higher relative valuation
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2024,2191568.13,2726439.01,37.73,9.38,27.47,3.37,14.8,13.1,True,True,True,44.44444444444444,67.77777777777779,61.111111111111114,Middle relative valuation,Higher relative valuation,Middle relative valuation
+BAJFINANCE,Bajaj Finance Ltd,Mar 2024,2473271.58,2632574.41,69.2,4.11,15.96,0.27,22.1,11.9,True,True,True,86.66666666666667,18.88888888888889,23.333333333333332,Higher relative valuation,Lower relative valuation,Lower relative valuation
+BANKBARODA,Bank of Baroda,Mar 2024,590971.02,656699.32,16.89,4.15,24.7,2.62,16.7,6.33,True,True,True,13.333333333333334,20.0,51.11111111111111,Lower relative valuation,Lower relative valuation,Middle relative valuation
+BEL,Bharat Electronics Ltd,Mar 2024,1354781.06,1259877.04,17.89,9.22,23.14,0.76,26.3,34.6,True,True,True,14.444444444444443,63.33333333333333,44.44444444444444,Lower relative valuation,Middle relative valuation,Middle relative valuation
+BHARTIARTL,Bharti Airtel Ltd,Mar 2024,378605.83,429972.49,63.78,6.28,39.71,1.02,14.9,13.1,True,True,True,78.88888888888889,42.22222222222222,98.88888888888889,Higher relative valuation,Middle relative valuation,Higher relative valuation
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2024,540053.85,682460.17,29.8,11.43,21.59,4.04,1.05,3.28,True,True,True,25.555555555555554,83.33333333333334,38.88888888888889,Lower relative valuation,Higher relative valuation,Middle relative valuation
+BOSCHLTD,Bosch Ltd,Mar 2024,2599556.05,2628370.51,58.43,6.47,16.07,4.23,16.0,20.6,True,True,True,72.22222222222221,44.44444444444444,24.444444444444443,Higher relative valuation,Middle relative valuation,Lower relative valuation
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2024,468662.13,606487.07,68.15,0.72,26.59,1.15,41.9,32.1,True,True,True,84.44444444444444,1.1111111111111112,60.0,Higher relative valuation,Lower relative valuation,Middle relative valuation
+BRITANNIA,Britannia Industries Ltd,Mar 2024,324745.74,376568.58,63.91,4.26,33.95,1.88,57.1,48.9,True,True,True,80.0,22.22222222222222,86.66666666666667,Higher relative valuation,Lower relative valuation,Higher relative valuation
+CANBK,Canara Bank,Mar 2024,496415.88,483983.21,36.74,12.61,25.23,3.81,17.9,6.63,True,True,True,43.333333333333336,92.22222222222223,56.666666666666664,Middle relative valuation,Higher relative valuation,Middle relative valuation
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2024,971931.96,1024979.49,16.79,10.36,13.52,2.83,20.2,10.4,True,True,True,12.222222222222221,77.22222222222223,14.444444444444443,Lower relative valuation,Higher relative valuation,Lower relative valuation
+CIPLA,"Cipla Ltd
+",Mar 2024,439803.15,562931.78,59.75,5.93,33.7,0.12,16.8,22.8,True,True,True,75.55555555555556,36.666666666666664,84.44444444444444,Higher relative valuation,Middle relative valuation,Higher relative valuation
+COALINDIA,Coal India Ltd,Mar 2024,454024.84,574785.39,34.27,14.75,25.15,4.38,52.0,63.6,True,True,True,37.77777777777778,100.0,55.55555555555556,Middle relative valuation,Higher relative valuation,Middle relative valuation
+DABUR,Dabur India Ltd,Mar 2024,56521.84,67755.32,50.95,13.59,12.02,3.42,19.2,22.3,True,True,True,62.22222222222222,93.33333333333333,10.555555555555555,Middle relative valuation,Higher relative valuation,Lower relative valuation
+DIVISLAB,Divis Laboratories Ltd,Mar 2024,1615028.67,1501836.03,69.95,12.34,31.81,1.39,12.2,16.5,True,True,True,88.88888888888889,88.88888888888889,78.88888888888889,Higher relative valuation,Higher relative valuation,Higher relative valuation
+DLF,DLF Ltd,Mar 2024,1381712.03,1248409.43,46.26,14.32,10.41,2.58,6.95,5.74,True,True,True,52.22222222222223,97.77777777777777,6.666666666666667,Middle relative valuation,Higher relative valuation,Lower relative valuation
+DMART,Avenue Supermarts Ltd,Mar 2024,3053088.97,3624591.94,72.53,11.71,36.84,1.94,14.5,19.4,True,True,True,93.33333333333333,84.44444444444444,93.33333333333333,Higher relative valuation,Higher relative valuation,Higher relative valuation
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2024,2441803.28,2725256.67,11.73,10.19,14.56,0.09,21.4,26.5,True,True,True,6.666666666666667,75.55555555555556,15.555555555555555,Lower relative valuation,Higher relative valuation,Lower relative valuation
+EICHERMOT,Eicher Motors Ltd,Mar 2024,222391.83,234358.89,15.62,13.61,19.29,4.41,24.2,31.1,True,True,True,11.11111111111111,94.44444444444444,33.33333333333333,Lower relative valuation,Higher relative valuation,Middle relative valuation
+GAIL,GAIL (India) Ltd,Mar 2024,1531867.57,1613856.89,25.84,9.54,33.07,0.31,14.0,14.7,True,True,True,22.22222222222222,70.0,82.22222222222221,Lower relative valuation,Higher relative valuation,Higher relative valuation
+GODREJCP,Godrej Consumer Products Ltd,Mar 2024,1327797.2,1350416.57,33.59,8.07,23.55,3.09,6.77,26.49,True,True,True,35.55555555555556,55.55555555555556,45.55555555555556,Middle relative valuation,Middle relative valuation,Middle relative valuation
+GRASIM,Grasim Industries Ltd,Mar 2024,478951.82,601673.21,79.35,5.68,15.23,0.98,6.9,9.3,True,True,True,100.0,33.33333333333333,17.77777777777778,Higher relative valuation,Middle relative valuation,Lower relative valuation
+HAL,Hindustan Aeronautics Ltd,Mar 2024,2643616.86,3140281.78,71.89,3.65,8.76,2.77,28.9,38.9,True,True,True,92.22222222222223,14.444444444444443,5.555555555555555,Higher relative valuation,Lower relative valuation,Lower relative valuation
+HAVELLS,Havells India Ltd,Mar 2024,2521508.87,2620805.22,45.41,14.08,30.73,2.6,18.0,24.4,True,True,True,50.0,96.66666666666667,72.22222222222221,Middle relative valuation,Higher relative valuation,Higher relative valuation
+HCLTECH,HCL Technologies Ltd,Mar 2024,412593.29,461362.25,63.63,5.44,31.21,1.99,23.3,29.6,True,True,True,77.77777777777779,31.11111111111111,75.55555555555556,Higher relative valuation,Lower relative valuation,Higher relative valuation
+HDFCBANK,HDFC Bank Ltd,Mar 2024,808359.03,976938.14,49.42,4.4,22.54,4.33,17.1,7.67,True,True,True,60.0,24.444444444444443,41.11111111111111,Middle relative valuation,Lower relative valuation,Middle relative valuation
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2024,47027.6,42921.31,50.59,11.28,31.63,3.22,11.4,6.61,True,True,True,61.111111111111114,82.22222222222221,76.66666666666667,Middle relative valuation,Higher relative valuation,Higher relative valuation
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2024,1593400.88,1475343.49,53.86,12.6,28.27,1.91,22.0,29.1,True,True,True,64.44444444444444,91.11111111111111,65.55555555555556,Middle relative valuation,Higher relative valuation,Middle relative valuation
+HINDALCO,Hindalco Industries Ltd,Mar 2024,722281.1,656285.92,56.45,9.32,27.63,0.98,10.2,11.3,True,True,True,68.88888888888889,66.66666666666666,62.22222222222222,Higher relative valuation,Middle relative valuation,Middle relative valuation
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2024,548890.59,587463.38,34.51,11.88,7.52,4.32,20.2,27.2,True,True,True,38.88888888888889,86.66666666666667,3.3333333333333335,Middle relative valuation,Higher relative valuation,Lower relative valuation
+ICICIBANK,ICICI Bank Ltd,Mar 2024,1319221.86,1598760.1,25.76,6.2,38.28,3.43,18.8,7.6,True,True,True,21.11111111111111,40.0,96.66666666666667,Lower relative valuation,Middle relative valuation,Higher relative valuation
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2024,1271789.21,1382030.89,49.0,7.86,36.96,3.46,17.0,22.5,True,True,True,58.88888888888889,52.22222222222223,94.44444444444444,Middle relative valuation,Middle relative valuation,Higher relative valuation
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2024,1596987.55,2014403.87,20.83,12.38,22.57,0.35,8.07,8.75,True,True,True,18.88888888888889,90.0,42.22222222222222,Lower relative valuation,Higher relative valuation,Middle relative valuation
+INDIGO,Interglobe Aviation Ltd,Mar 2024,1040632.92,1061542.29,76.23,7.87,24.64,4.27,,24.5,True,True,True,96.66666666666667,53.333333333333336,50.0,Higher relative valuation,Middle relative valuation,Middle relative valuation
+INDUSINDBK,IndusInd Bank Ltd,Mar 2024,1807433.12,1674611.06,8.99,3.7,28.79,1.42,15.2,7.93,True,True,True,2.2222222222222223,15.555555555555555,66.66666666666666,Lower relative valuation,Lower relative valuation,Middle relative valuation
+INFY,Infosys Ltd,Mar 2024,1112279.92,1372029.68,35.99,8.97,36.7,4.1,31.8,40.0,True,True,True,41.11111111111111,60.0,92.22222222222223,Middle relative valuation,Middle relative valuation,Higher relative valuation
+IOC,"Indian Oil Corporation
+",Mar 2024,1418164.33,1786391.89,28.61,4.24,33.71,1.25,25.44,21.31,True,True,True,24.444444444444443,21.11111111111111,85.55555555555556,Lower relative valuation,Lower relative valuation,Higher relative valuation
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2024,1258520.29,1473943.68,60.44,5.74,32.47,1.08,40.4,53.8,True,True,True,76.66666666666667,35.55555555555556,80.0,Higher relative valuation,Middle relative valuation,Higher relative valuation
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2024,2618348.58,2449260.08,9.81,3.91,16.66,2.82,13.7,5.73,True,True,True,4.444444444444445,17.77777777777778,26.666666666666668,Lower relative valuation,Lower relative valuation,Lower relative valuation
+ITC,"ITC Ltd
+",Mar 2024,332245.58,369131.93,47.85,3.24,17.19,4.26,29.47,34.76,True,True,True,55.55555555555556,11.11111111111111,30.0,Middle relative valuation,Lower relative valuation,Lower relative valuation
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2024,396587.97,478682.44,77.64,5.73,20.22,1.9,14.1,13.2,True,True,True,97.77777777777777,34.44444444444444,35.55555555555556,Higher relative valuation,Middle relative valuation,Middle relative valuation
+JIOFIN,Jio Financial Services Ltd,Mar 2024,1401774.99,1814281.53,34.24,9.91,26.41,3.09,1.82,2.16,True,True,True,36.666666666666664,73.88888888888889,57.77777777777777,Middle relative valuation,Higher relative valuation,Middle relative valuation
+JSWENERGY,JSW Energy Ltd,Mar 2024,110870.53,124622.6,24.79,9.88,35.95,1.25,8.4,8.59,True,True,True,20.0,72.22222222222221,91.11111111111111,Lower relative valuation,Higher relative valuation,Higher relative valuation
+JSWSTEEL,JSW Steel Ltd,Mar 2024,2612646.38,3187328.18,69.27,4.37,35.49,2.94,11.66,13.36,True,True,True,87.77777777777777,23.333333333333332,90.0,Higher relative valuation,Lower relative valuation,Higher relative valuation
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2024,430223.52,548886.13,32.9,1.15,15.52,1.51,15.1,7.86,True,True,True,33.33333333333333,4.444444444444445,21.11111111111111,Middle relative valuation,Lower relative valuation,Lower relative valuation
+LICI,Life Insurance Corporation of India,Mar 2024,183583.67,205478.22,30.67,8.1,12.21,3.77,63.61,63.79,True,True,True,27.77777777777778,56.666666666666664,12.222222222222221,Lower relative valuation,Middle relative valuation,Lower relative valuation
+LODHA,Macrotech Developers Ltd,Mar 2024,1209919.99,1301112.44,51.95,7.65,34.33,4.05,10.7,11.1,True,True,True,63.33333333333333,50.0,87.77777777777777,Middle relative valuation,Middle relative valuation,Higher relative valuation
+LT,Larsen & Toubro Ltd,Mar 2024,1124597.5,1097873.76,30.8,2.48,16.63,1.26,10.49,17.18,True,True,True,29.444444444444446,10.0,25.555555555555554,Lower relative valuation,Lower relative valuation,Lower relative valuation
+LTIM,LTIMindtree Ltd,Mar 2024,1347046.9,1647384.23,64.52,2.38,18.9,4.43,26.04,34.1,True,True,True,82.22222222222221,8.333333333333332,32.22222222222222,Higher relative valuation,Lower relative valuation,Lower relative valuation
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2024,4173085.48,3837414.39,14.22,0.81,29.08,2.37,17.99,26.98,True,True,True,7.777777777777778,2.2222222222222223,68.88888888888889,Lower relative valuation,Lower relative valuation,Higher relative valuation
+MARUTI,Maruti Suzuki India Ltd,Mar 2024,1503863.63,1891991.87,20.78,8.26,29.97,1.78,15.75,23.67,True,True,True,17.77777777777778,57.77777777777777,71.11111111111111,Lower relative valuation,Middle relative valuation,Higher relative valuation
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2024,146151.16,161406.34,9.54,2.38,33.39,2.18,11.8,13.7,True,True,True,3.3333333333333335,8.333333333333332,83.33333333333334,Lower relative valuation,Lower relative valuation,Higher relative valuation
+NAUKRI,Info Edge (India) Ltd,Mar 2024,563824.44,544283.76,32.88,8.33,11.87,4.29,2.44,3.65,True,True,True,32.22222222222222,58.88888888888889,8.88888888888889,Lower relative valuation,Middle relative valuation,Lower relative valuation
+NESTLEIND,Nestle India Ltd,Mar 2024,1677775.19,1677279.88,54.96,14.34,15.49,3.85,135.61,185.43,True,True,True,66.66666666666666,98.88888888888889,20.0,Middle relative valuation,Higher relative valuation,Lower relative valuation
+NHPC,"NHPC Ltd
+",Mar 2024,1740404.25,2103124.81,71.17,13.74,18.26,1.68,9.61,7.67,True,True,True,91.11111111111111,95.55555555555556,31.11111111111111,Higher relative valuation,Higher relative valuation,Lower relative valuation
+NTPC,NTPC Ltd,Mar 2024,907823.11,1142814.16,30.8,5.24,37.12,0.06,12.52,10.58,True,True,True,29.444444444444446,30.0,95.55555555555556,Lower relative valuation,Lower relative valuation,Higher relative valuation
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2024,390111.05,499988.49,18.15,10.36,11.72,1.11,14.32,19.71,True,True,True,15.555555555555555,77.22222222222223,7.777777777777778,Lower relative valuation,Higher relative valuation,Lower relative valuation
+PFC,Power Finance Corporation Ltd,Mar 2024,2011885.81,2014246.29,35.6,6.59,15.67,0.42,19.49,9.96,True,True,True,40.0,45.55555555555556,22.22222222222222,Middle relative valuation,Middle relative valuation,Lower relative valuation
+PIDILITIND,Pidilite Industries Ltd,Mar 2024,162274.18,165749.2,36.12,12.3,5.36,1.01,22.8,29.7,True,True,True,42.22222222222222,87.77777777777777,1.1111111111111112,Middle relative valuation,Higher relative valuation,Lower relative valuation
+PNB,Punjab National Bank,Mar 2024,1825925.6,2365495.49,19.29,10.91,23.64,1.32,8.7,1.63,True,True,True,16.666666666666664,81.11111111111111,46.666666666666664,Lower relative valuation,Higher relative valuation,Middle relative valuation
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2024,372584.24,410018.95,64.39,5.1,23.07,3.09,19.0,13.2,True,True,True,81.11111111111111,28.888888888888886,43.333333333333336,Higher relative valuation,Lower relative valuation,Middle relative valuation
+RECLTD,REC Ltd,Mar 2024,291917.42,315256.49,31.49,4.59,23.95,2.18,22.2,10.0,True,True,True,31.11111111111111,26.666666666666668,48.888888888888886,Lower relative valuation,Lower relative valuation,Middle relative valuation
+RELIANCE,"Reliance Industries Ltd
+",Mar 2024,432472.71,545039.37,58.34,3.25,24.96,4.21,9.25,9.61,True,True,True,71.11111111111111,12.222222222222221,54.44444444444444,Higher relative valuation,Lower relative valuation,Middle relative valuation
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2024,886097.71,1097553.71,69.98,9.48,31.04,1.62,12.0,13.2,True,True,True,90.0,68.88888888888889,74.44444444444444,Higher relative valuation,Higher relative valuation,Higher relative valuation
+SHREECEM,Shree Cement Ltd,Mar 2024,3154358.33,2911084.5,25.87,1.21,26.58,3.2,12.2,14.8,True,True,True,23.333333333333332,5.555555555555555,58.88888888888889,Lower relative valuation,Lower relative valuation,Middle relative valuation
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2024,868933.47,1098024.4,68.53,7.91,28.82,1.86,15.9,11.3,True,True,True,85.55555555555556,54.44444444444444,67.77777777777779,Higher relative valuation,Middle relative valuation,Higher relative valuation
+SIEMENS,Siemens Ltd,Sep 2024,1191331.95,1268446.56,33.32,9.25,30.88,3.69,19.1,25.6,True,True,True,34.44444444444444,65.55555555555556,73.33333333333333,Middle relative valuation,Middle relative valuation,Higher relative valuation
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2024,1339586.09,1264175.16,37.9,6.71,21.41,3.88,16.7,17.3,True,True,True,45.55555555555556,46.666666666666664,37.77777777777778,Middle relative valuation,Middle relative valuation,Middle relative valuation
+TATACONSUM,Tata Consumer Products Ltd,Mar 2024,350543.35,387549.77,54.79,7.14,24.84,1.87,8.32,10.6,True,True,True,65.55555555555556,47.77777777777778,53.333333333333336,Middle relative valuation,Middle relative valuation,Middle relative valuation
+TATAMOTORS,Tata Motors Ltd,Mar 2024,1504106.64,1588737.42,67.07,0.93,15.35,3.65,49.4,20.1,True,True,True,83.33333333333334,3.3333333333333335,18.88888888888889,Higher relative valuation,Lower relative valuation,Lower relative valuation
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2024,1647269.48,1925345.06,14.5,3.48,12.02,0.49,11.3,11.1,True,True,True,8.88888888888889,13.333333333333334,10.555555555555555,Lower relative valuation,Lower relative valuation,Lower relative valuation
+TATASTEEL,"Tata Steel Ltd
+",Mar 2024,369110.65,402972.23,48.97,9.23,38.87,1.0,6.55,7.02,True,True,True,57.77777777777777,64.44444444444444,97.77777777777777,Middle relative valuation,Middle relative valuation,Higher relative valuation
+TCS,Tata Consultancy Services Ltd,Mar 2024,461188.15,542230.13,78.69,6.08,29.94,1.62,0.52,64.3,True,True,True,98.88888888888889,38.333333333333336,70.0,Higher relative valuation,Middle relative valuation,Higher relative valuation
+TECHM,Tech Mahindra Ltd,Mar 2024,3021095.64,3131058.36,57.4,7.43,7.85,0.64,8.63,11.9,True,True,True,70.0,48.888888888888886,4.444444444444445,Higher relative valuation,Middle relative valuation,Lower relative valuation
+TITAN,"Titan Company Ltd
+",Mar 2024,1793769.72,2116401.21,10.13,10.51,21.0,3.1,32.9,22.7,True,True,True,5.555555555555555,80.0,36.666666666666664,Lower relative valuation,Higher relative valuation,Middle relative valuation
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2024,1870170.39,2275967.43,46.4,6.43,27.93,1.22,24.2,23.2,True,True,True,53.333333333333336,43.333333333333336,64.44444444444444,Middle relative valuation,Middle relative valuation,Middle relative valuation
+TRENT,Trent Ltd,Mar 2024,571322.04,566293.08,8.65,11.82,34.65,3.46,27.2,23.8,True,True,True,1.1111111111111112,85.55555555555556,88.88888888888889,Lower relative valuation,Higher relative valuation,Higher relative valuation
+TVSMOTOR,TVS Motor Company Ltd,Mar 2024,266591.41,334973.15,46.1,5.62,7.1,3.07,,,True,True,True,51.11111111111111,32.22222222222222,2.2222222222222223,Middle relative valuation,Lower relative valuation,Lower relative valuation
+ULTRACEMCO,,Mar 2024,,,,,,,,,False,False,False,,,,Unavailable,Unavailable,Unavailable
+UNIONBANK,,Mar 2024,,,,,,,,,False,False,False,,,,Unavailable,Unavailable,Unavailable

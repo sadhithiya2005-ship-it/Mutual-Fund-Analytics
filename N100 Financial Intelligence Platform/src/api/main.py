@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from api.schemas.common import HealthResponse
 
 from api.routes.companies import router as companies_router
 from api.routes.ratios import router as ratios_router
@@ -19,7 +20,7 @@ def root():
     }
 
 
-@app.get("/health")
+@app.get("/health", response_model=HealthResponse)
 def health():
     return {
         "status": "healthy"

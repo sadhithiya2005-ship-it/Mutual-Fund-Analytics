@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from api.schemas.common import CompaniesResponse
 
 import pandas as pd
 from fastapi import APIRouter, HTTPException
@@ -15,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[3]
 COMPANIES_FILE = ROOT / "data" / "raw" / "companies.xlsx"
 
 
-@router.get("/")
+@router.get("/", response_model=CompaniesResponse)
 def get_companies():
     """Return the N100 company list."""
 

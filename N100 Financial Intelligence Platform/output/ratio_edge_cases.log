@@ -1,0 +1,45 @@
+N100 RATIO ENGINE - EDGE CASE LOG
+=================================
+
+1. SOURCE DATA COVERAGE
+- Companies: 92
+- Financial ratio records: 1184
+- Market cap records: 552
+
+2. DUPLICATE COMPANY-YEAR RECORDS
+- Financial ratios contains 119 duplicate company-year observations.
+- These are not necessarily exact duplicates.
+- CAGR calculations remove duplicate company-year observations before calculation.
+
+3. MISSING INTEREST COVERAGE
+- 93 records have missing interest coverage.
+- Missing values are retained as NaN.
+- They are not converted to zero.
+
+4. MISSING CASH-FLOW VALUES
+- FCF conversion has 4 missing values.
+- CapEx/CFO has 4 missing values.
+- These occur where CFO is unavailable or zero.
+
+5. EPS CAGR COVERAGE
+- EPS CAGR is available for 89 companies.
+- Some companies lack sufficient valid historical EPS data for 3/5/10-year CAGR.
+
+6. UNAVAILABLE FINANCIAL STATEMENT KPIs
+The current source files do not provide the required historical fields for:
+- Revenue CAGR
+- PAT CAGR
+- CFO / Revenue
+- CapEx / Revenue
+- Total Assets based ROA
+- Current Assets / Current Liabilities based liquidity ratios
+
+These KPIs must not be fabricated.
+
+7. LEVERAGE FLAGS
+- Debt-free flag uses debt-to-equity = 0.
+- High leverage flag uses debt-to-equity > 2.
+- Interest coverage warning uses ICR < 2 where ICR is available.
+
+8. DATA HANDLING PRINCIPLE
+Missing source data is retained as missing rather than replaced with artificial values.
