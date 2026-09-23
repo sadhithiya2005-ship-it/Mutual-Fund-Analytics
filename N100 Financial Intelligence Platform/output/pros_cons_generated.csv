@@ -1,0 +1,244 @@
+company_id,type,rule_id,text,confidence_pct
+ABB,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ABB,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83.32
+ADANIENSOL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,80.0
+ADANIENSOL,con,CON_1,Debt-to-equity ratio of 2.93 is elevated and warrants monitoring,79.32
+ADANIENSOL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,73.0
+ADANIENT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+ADANIENT,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+ADANIGREEN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIGREEN,con,CON_1,Debt-to-equity ratio of 6.60 is elevated and warrants monitoring,100.0
+ADANIGREEN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+ADANIPORTS,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIPOWER,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,92.0
+AMBUJACEM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+AMBUJACEM,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+APOLLOHOSP,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+APOLLOHOSP,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,99.9
+ASIANPAINT,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ASIANPAINT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+ASIANPAINT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,81.95
+AXISBANK,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+AXISBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+AXISBANK,con,CON_1,Debt-to-equity ratio of 8.25 is elevated and warrants monitoring,100.0
+AXISBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,78.82
+AXISBANK,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BAJAJ-AUTO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJAJ-AUTO,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+BAJAJFINSV,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
+BAJAJFINSV,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,81.18
+BAJAJFINSV,con,CON_1,Debt-to-equity ratio of 4.79 is elevated and warrants monitoring,97.89
+BAJAJFINSV,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BAJAJHLDNG,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BAJAJHLDNG,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJAJHLDNG,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+BAJAJHLDNG,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,77.94
+BAJFINANCE,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BAJFINANCE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJFINANCE,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,95.11
+BAJFINANCE,con,CON_1,Debt-to-equity ratio of 3.82 is elevated and warrants monitoring,88.25
+BAJFINANCE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BANKBARODA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BANKBARODA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BANKBARODA,con,CON_1,Debt-to-equity ratio of 12.14 is elevated and warrants monitoring,100.0
+BANKBARODA,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,81.01
+BANKBARODA,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BEL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BHARTIARTL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BHARTIARTL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BHARTIARTL,con,CON_1,Debt-to-equity ratio of 2.61 is elevated and warrants monitoring,76.1
+BHEL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,90.16
+BHEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+BOSCHLTD,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BOSCHLTD,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+BPCL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BPCL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,96.13
+BRITANNIA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CANBK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+CANBK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+CANBK,con,CON_1,Debt-to-equity ratio of 14.87 is elevated and warrants monitoring,100.0
+CANBK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,80.11
+CHOLAFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+CHOLAFIN,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CHOLAFIN,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,84.55
+CHOLAFIN,con,CON_1,Debt-to-equity ratio of 6.86 is elevated and warrants monitoring,100.0
+CHOLAFIN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+CIPLA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+CIPLA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CIPLA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83.67
+COALINDIA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+COALINDIA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+COALINDIA,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+COALINDIA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,73.7
+DABUR,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DABUR,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+DIVISLAB,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
+DIVISLAB,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DLF,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,86.0
+DLF,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+DLF,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,82.78
+DMART,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DMART,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85.48
+DRREDDY,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
+DRREDDY,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DRREDDY,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,87.68
+EICHERMOT,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,72.0
+EICHERMOT,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+EICHERMOT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+GAIL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+GODREJCP,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+GRASIM,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,95.46
+GRASIM,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,72.1
+GRASIM,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+HAL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
+HAL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HAL,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+HAL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,93.28
+HAVELLS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HAVELLS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+HCLTECH,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HDFCBANK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+HDFCBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70.85
+HDFCBANK,con,CON_1,Debt-to-equity ratio of 6.81 is elevated and warrants monitoring,100.0
+HDFCBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+HDFCBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.99
+HDFCLIFE,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HDFCLIFE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HDFCLIFE,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,80.17
+HDFCLIFE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+HEROMOTOCO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HEROMOTOCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HINDALCO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HINDALCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HINDUNILVR,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HINDUNILVR,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HINDUNILVR,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+ICICIBANK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+ICICIBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+ICICIBANK,con,CON_1,Debt-to-equity ratio of 6.45 is elevated and warrants monitoring,100.0
+ICICIBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+ICICIBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,77.2
+ICICIGI,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ICICIGI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ICICIGI,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+ICICIPRULI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ICICIPRULI,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,73.75
+INDIGO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+INDIGO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+INDIGO,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+INDIGO,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+INDUSINDBK,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+INDUSINDBK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,71.79
+INDUSINDBK,con,CON_1,Debt-to-equity ratio of 6.89 is elevated and warrants monitoring,100.0
+INDUSINDBK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.21
+INDUSINDBK,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+INFY,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+INFY,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+IOC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+IOC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
+IRCTC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,88.0
+IRCTC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+IRCTC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,96.95
+IRFC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+IRFC,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+IRFC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
+IRFC,con,CON_1,Debt-to-equity ratio of 8.38 is elevated and warrants monitoring,100.0
+IRFC,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+IRFC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,82.81
+ITC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
+ITC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ITC,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+JINDALSTEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+JIOFIN,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
+JIOFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+JIOFIN,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+JIOFIN,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+JIOFIN,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,93.52
+JSWENERGY,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+JSWENERGY,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
+JSWENERGY,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,74.23
+JSWENERGY,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+JSWSTEEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+KOTAKBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,78.69
+KOTAKBANK,con,CON_1,Debt-to-equity ratio of 4.00 is elevated and warrants monitoring,90.04
+KOTAKBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+KOTAKBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.42
+LICI,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
+LICI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+LICI,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+LODHA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,72.0
+LODHA,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+LTIM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+LTIM,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+M&M,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,72.35
+M&M,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+MARUTI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+MOTHERSON,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+NAUKRI,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
+NAUKRI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NAUKRI,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,89.05
+NAUKRI,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+NESTLEIND,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NESTLEIND,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+NESTLEIND,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70.88
+NHPC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+NHPC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NHPC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.99
+NTPC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
+ONGC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+PFC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
+PFC,con,CON_1,Debt-to-equity ratio of 8.52 is elevated and warrants monitoring,100.0
+PFC,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+PFC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,70.12
+PFC,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+PIDILITIND,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+PNB,con,CON_1,Debt-to-equity ratio of 3.68 is elevated and warrants monitoring,86.84
+PNB,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,95.11
+PNB,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+POWERGRID,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+POWERGRID,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+RECLTD,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+RECLTD,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.34
+RECLTD,con,CON_1,Debt-to-equity ratio of 6.42 is elevated and warrants monitoring,100.0
+RECLTD,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+RELIANCE,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+RELIANCE,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,71.17
+SBILIFE,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
+SBILIFE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SBILIFE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+SHREECEM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SHREECEM,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+SHRIRAMFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
+SHRIRAMFIN,con,CON_1,Debt-to-equity ratio of 3.99 is elevated and warrants monitoring,89.94
+SHRIRAMFIN,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+SHRIRAMFIN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+SIEMENS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SIEMENS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+SIEMENS,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.29
+SUNPHARMA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
+SUNPHARMA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SUNPHARMA,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+SUNPHARMA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,98.92
+TATACONSUM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TATAMOTORS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+TATASTEEL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,78.94
+TCS,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,74.0
+TCS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TECHM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TECHM,con,CON_7,"Dividend payout ratio above 100% means the company is paying dividends from reserves, which is unsustainable",90.0
+TITAN,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+TITAN,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.01
+TORNTPHARM,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,82.0
+TORNTPHARM,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+TRENT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+TRENT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+TVSMOTOR,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,78.27
+TVSMOTOR,con,CON_1,Debt-to-equity ratio of 3.83 is elevated and warrants monitoring,88.33
+TVSMOTOR,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+ULTRACEMCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ULTRACEMCO,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85.05
+UNIONBANK,con,CON_1,Debt-to-equity ratio of 12.82 is elevated and warrants monitoring,100.0
+UNIONBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+ATGL,data_unavailable,SOURCE_MISSING,Financial ratio source data is unavailable; no unsupported pros/cons were generated,
+SBIN,data_unavailable,SOURCE_MISSING,Financial ratio source data is unavailable; no unsupported pros/cons were generated,
