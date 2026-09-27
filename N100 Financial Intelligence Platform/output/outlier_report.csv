@@ -1,0 +1,7 @@
+company_id,company_name,broad_sector,feature,value,z_score,outlier_flag
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,return_on_equity_pct,892.57,3.6029633004686246,True
+INDIGO,Interglobe Aviation Ltd,Consumer Discretionary,operating_profit_margin_pct,16331.0,3.427000889067984,True
+ADANIGREEN,Adani Green Energy Ltd,Energy,debt_to_equity,6.5953,3.2753067048806828,True
+PNB,Punjab National Bank,Financials,return_on_equity_pct,61.31999999999999,3.407071424304211,True
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials,fcf_cagr_5yr,32.27903093325808,3.3134192632644495,True
+HDFCBANK,HDFC Bank Ltd,Financials,operating_profit_margin_pct,-44685.0,-3.7918447387338214,True

@@ -1,3 +1,4 @@
+
 from fastapi.testclient import TestClient
 
 from src.api.main import app
@@ -7,14 +8,17 @@ client = TestClient(app)
 
 
 def test_health():
-    response = client.get("/health")
+    response = client.get("/api/v1/health/")
 
     assert response.status_code == 200
-    assert response.json()["status"] == "healthy"
+
+    data = response.json()
+
+    assert data["status"] == "healthy"
 
 
 def test_companies():
-    response = client.get("/companies/")
+    response = client.get("/api/v1/companies/")
 
     assert response.status_code == 200
 
@@ -25,7 +29,7 @@ def test_companies():
 
 
 def test_ratios():
-    response = client.get("/ratios/ABB")
+    response = client.get("/api/v1/ratios/ABB")
 
     assert response.status_code == 200
 
@@ -37,7 +41,7 @@ def test_ratios():
 
 
 def test_valuation():
-    response = client.get("/valuation/ABB")
+    response = client.get("/api/v1/valuation/ABB")
 
     assert response.status_code == 200
 

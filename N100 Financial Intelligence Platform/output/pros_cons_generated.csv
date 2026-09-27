@@ -1,244 +1,806 @@
 company_id,type,rule_id,text,confidence_pct
-ABB,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ABB,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83.32
-ADANIENSOL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,80.0
-ADANIENSOL,con,CON_1,Debt-to-equity ratio of 2.93 is elevated and warrants monitoring,79.32
-ADANIENSOL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,73.0
-ADANIENT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+ABB,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+ABB,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+ABB,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ABB,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ABB,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,83.32
+ABB,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.1
+ABB,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,81.06
+ABB,con,CON_13,P/E ratio of 75.58 is elevated and may indicate a demanding valuation,82.79
+ADANIENSOL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ADANIENSOL,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,80.0
+ADANIENSOL,con,CON_1,Debt-to-equity ratio of 2.93 is elevated and warrants monitoring,79.33
+ADANIENSOL,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,71.62
+ADANIENSOL,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,73.0
+ADANIENSOL,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+ADANIENSOL,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,73.0
+ADANIENSOL,con,CON_13,P/E ratio of 58.50 is elevated and may indicate a demanding valuation,74.25
+ADANIENSOL,con,CON_15,P/B ratio of 9.05 is elevated and warrants valuation monitoring,72.1
+ADANIENT,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
 ADANIENT,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-ADANIGREEN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIENT,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,74.41
+ADANIENT,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+ADANIENT,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,76.16
+ADANIENT,con,CON_13,P/E ratio of 58.87 is elevated and may indicate a demanding valuation,74.44
+ADANIENT,con,CON_14,EV/EBITDA of 33.01 is elevated and indicates a demanding enterprise valuation,71.5
+ADANIENT,con,CON_15,P/B ratio of 10.41 is elevated and warrants valuation monitoring,74.82
+ADANIGREEN,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+ADANIGREEN,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
 ADANIGREEN,con,CON_1,Debt-to-equity ratio of 6.60 is elevated and warrants monitoring,100.0
 ADANIGREEN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-ADANIPORTS,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-ADANIPOWER,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,92.0
-AMBUJACEM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ADANIGREEN,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+ADANIGREEN,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+ADANIGREEN,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+ADANIPORTS,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,70.7
+ADANIPORTS,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ADANIPORTS,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+ADANIPORTS,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,72.47
+ADANIPORTS,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+ADANIPORTS,con,CON_14,EV/EBITDA of 31.76 is elevated and indicates a demanding enterprise valuation,70.88
+ADANIPOWER,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+ADANIPOWER,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+ADANIPOWER,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ADANIPOWER,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,92.0
+ADANIPOWER,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+ADANIPOWER,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+ADANIPOWER,con,CON_15,P/B ratio of 9.91 is elevated and warrants valuation monitoring,73.82
+AMBUJACEM,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+AMBUJACEM,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.32
+AMBUJACEM,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,73.0
 AMBUJACEM,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-APOLLOHOSP,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-APOLLOHOSP,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,99.9
-ASIANPAINT,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ASIANPAINT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-ASIANPAINT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,81.95
-AXISBANK,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-AXISBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+AMBUJACEM,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+AMBUJACEM,con,CON_13,P/E ratio of 55.62 is elevated and may indicate a demanding valuation,72.81
+AMBUJACEM,con,CON_15,P/B ratio of 9.21 is elevated and warrants valuation monitoring,72.42
+APOLLOHOSP,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,74.4
+APOLLOHOSP,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+APOLLOHOSP,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+APOLLOHOSP,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,99.9
+APOLLOHOSP,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,73.6
+APOLLOHOSP,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,70.36
+ASIANPAINT,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,99.36
+ASIANPAINT,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+ASIANPAINT,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ASIANPAINT,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,74.13
+ASIANPAINT,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ASIANPAINT,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+ASIANPAINT,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,81.95
+ASIANPAINT,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,84.72
+ASIANPAINT,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,71.32
+ASIANPAINT,con,CON_13,P/E ratio of 73.37 is elevated and may indicate a demanding valuation,81.69
+AXISBANK,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,71.66
+AXISBANK,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+AXISBANK,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+AXISBANK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+AXISBANK,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,85.46
 AXISBANK,con,CON_1,Debt-to-equity ratio of 8.25 is elevated and warrants monitoring,100.0
-AXISBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,78.82
 AXISBANK,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BAJAJ-AUTO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-BAJAJ-AUTO,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-BAJAJFINSV,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
-BAJAJFINSV,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,81.18
+AXISBANK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,78.82
+AXISBANK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+AXISBANK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,78.82
+AXISBANK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+BAJAJ-AUTO,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,93.22
+BAJAJ-AUTO,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+BAJAJ-AUTO,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BAJAJ-AUTO,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,94.45
+BAJAJ-AUTO,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BAJAJ-AUTO,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+BAJAJ-AUTO,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,87.36
+BAJAJ-AUTO,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,74.36
+BAJAJ-AUTO,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,75.45
+BAJAJ-AUTO,con,CON_15,P/B ratio of 9.83 is elevated and warrants valuation monitoring,73.66
+BAJAJFINSV,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,91.7
+BAJAJFINSV,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,82.28
+BAJAJFINSV,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,94.0
+BAJAJFINSV,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+BAJAJFINSV,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,81.18
+BAJAJFINSV,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,70.3
 BAJAJFINSV,con,CON_1,Debt-to-equity ratio of 4.79 is elevated and warrants monitoring,97.89
 BAJAJFINSV,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BAJAJHLDNG,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-BAJAJHLDNG,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-BAJAJHLDNG,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-BAJAJHLDNG,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,77.94
-BAJFINANCE,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-BAJFINANCE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-BAJFINANCE,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,95.11
+BAJAJFINSV,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+BAJAJFINSV,con,CON_14,EV/EBITDA of 39.72 is elevated and indicates a demanding enterprise valuation,74.86
+BAJAJHLDNG,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BAJAJHLDNG,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+BAJAJHLDNG,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,82.84
+BAJAJHLDNG,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BAJAJHLDNG,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+BAJAJHLDNG,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,77.94
+BAJAJHLDNG,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.95
+BAJAJHLDNG,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+BAJAJHLDNG,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,74.35
+BAJAJHLDNG,con,CON_15,P/B ratio of 9.38 is elevated and warrants valuation monitoring,72.76
+BAJFINANCE,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,77.68
+BAJFINANCE,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+BAJFINANCE,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,99.93
+BAJFINANCE,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BAJFINANCE,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,95.11
+BAJFINANCE,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,92.58
 BAJFINANCE,con,CON_1,Debt-to-equity ratio of 3.82 is elevated and warrants monitoring,88.25
 BAJFINANCE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BANKBARODA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-BANKBARODA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BAJFINANCE,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+BAJFINANCE,con,CON_13,P/E ratio of 69.20 is elevated and may indicate a demanding valuation,79.6
+BANKBARODA,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,71.52
+BANKBARODA,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+BANKBARODA,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+BANKBARODA,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+BANKBARODA,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,71.88
+BANKBARODA,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,70.6
 BANKBARODA,con,CON_1,Debt-to-equity ratio of 12.14 is elevated and warrants monitoring,100.0
-BANKBARODA,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,81.01
 BANKBARODA,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BEL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BANKBARODA,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,81.01
+BANKBARODA,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+BANKBARODA,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,81.01
+BANKBARODA,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+BEL,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+BEL,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+BEL,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BEL,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,79.32
 BEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BHARTIARTL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-BHARTIARTL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
-BHARTIARTL,con,CON_1,Debt-to-equity ratio of 2.61 is elevated and warrants monitoring,76.1
-BHEL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,90.16
+BEL,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+BEL,con,CON_15,P/B ratio of 9.22 is elevated and warrants valuation monitoring,72.44
+BHARTIARTL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BHARTIARTL,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+BHARTIARTL,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+BHARTIARTL,con,CON_1,Debt-to-equity ratio of 2.61 is elevated and warrants monitoring,76.09
+BHARTIARTL,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+BHARTIARTL,con,CON_13,P/E ratio of 63.78 is elevated and may indicate a demanding valuation,76.89
+BHARTIARTL,con,CON_14,EV/EBITDA of 39.71 is elevated and indicates a demanding enterprise valuation,74.86
+BHEL,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,77.08
+BHEL,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,75.5
+BHEL,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,77.7
 BHEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-BOSCHLTD,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-BOSCHLTD,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-BPCL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-BPCL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,96.13
-BRITANNIA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-CANBK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-CANBK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BHEL,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,96.55
+BHEL,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,90.16
+BHEL,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,91.0
+BHEL,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,90.16
+BHEL,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+BHEL,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,85.28
+BHEL,con,CON_15,P/B ratio of 11.43 is elevated and warrants valuation monitoring,76.86
+BOSCHLTD,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,81.28
+BOSCHLTD,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,81.2
+BOSCHLTD,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BOSCHLTD,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+BOSCHLTD,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BOSCHLTD,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+BOSCHLTD,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.87
+BOSCHLTD,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.65
+BOSCHLTD,con,CON_13,P/E ratio of 58.43 is elevated and may indicate a demanding valuation,74.22
+BPCL,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+BPCL,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+BPCL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BPCL,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,80.36
+BPCL,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BPCL,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,96.13
+BPCL,con,CON_13,P/E ratio of 68.15 is elevated and may indicate a demanding valuation,79.08
+BRITANNIA,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+BRITANNIA,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+BRITANNIA,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+BRITANNIA,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+BRITANNIA,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+BRITANNIA,con,CON_13,P/E ratio of 63.91 is elevated and may indicate a demanding valuation,76.95
+BRITANNIA,con,CON_14,EV/EBITDA of 33.95 is elevated and indicates a demanding enterprise valuation,71.97
+CANBK,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,73.44
+CANBK,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+CANBK,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,89.18
+CANBK,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+CANBK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+CANBK,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,76.55
 CANBK,con,CON_1,Debt-to-equity ratio of 14.87 is elevated and warrants monitoring,100.0
-CANBK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,80.11
-CHOLAFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-CHOLAFIN,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-CHOLAFIN,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,84.55
+CANBK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,80.11
+CANBK,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+CANBK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+CANBK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,80.11
+CANBK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+CANBK,con,CON_15,P/B ratio of 12.61 is elevated and warrants valuation monitoring,79.22
+CHOLAFIN,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,74.92
+CHOLAFIN,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+CHOLAFIN,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,99.0
+CHOLAFIN,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+CHOLAFIN,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,84.55
+CHOLAFIN,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,75.7
+CHOLAFIN,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,71.65
 CHOLAFIN,con,CON_1,Debt-to-equity ratio of 6.86 is elevated and warrants monitoring,100.0
 CHOLAFIN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-CIPLA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-CIPLA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-CIPLA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83.67
-COALINDIA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-COALINDIA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-COALINDIA,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-COALINDIA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,73.7
-DABUR,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-DABUR,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-DIVISLAB,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
-DIVISLAB,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-DLF,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,86.0
-DLF,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-DLF,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,82.78
-DMART,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-DMART,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85.48
-DRREDDY,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
-DRREDDY,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-DRREDDY,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,87.68
-EICHERMOT,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,72.0
-EICHERMOT,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-EICHERMOT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-GAIL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CHOLAFIN,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+CHOLAFIN,con,CON_15,P/B ratio of 10.36 is elevated and warrants valuation monitoring,74.72
+CIPLA,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,71.1
+CIPLA,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,85.6
+CIPLA,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+CIPLA,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+CIPLA,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+CIPLA,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,83.67
+CIPLA,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.16
+CIPLA,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,72.24
+CIPLA,con,CON_13,P/E ratio of 59.75 is elevated and may indicate a demanding valuation,74.88
+CIPLA,con,CON_14,EV/EBITDA of 33.70 is elevated and indicates a demanding enterprise valuation,71.85
+COALINDIA,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+COALINDIA,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+COALINDIA,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+COALINDIA,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+COALINDIA,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,82.61
+COALINDIA,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+COALINDIA,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+COALINDIA,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,73.7
+COALINDIA,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.85
+COALINDIA,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,92.52
+COALINDIA,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,79.4
+COALINDIA,con,CON_15,P/B ratio of 14.75 is elevated and warrants valuation monitoring,83.5
+DABUR,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,76.72
+DABUR,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,84.6
+DABUR,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+DABUR,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,70.88
+DABUR,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+DABUR,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+DABUR,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,84.46
+DABUR,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,74.6
+DABUR,con,CON_13,P/E ratio of 50.95 is elevated and may indicate a demanding valuation,70.47
+DABUR,con,CON_15,P/B ratio of 13.59 is elevated and warrants valuation monitoring,81.18
+DIVISLAB,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,73.0
+DIVISLAB,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+DIVISLAB,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,76.0
+DIVISLAB,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,84.33
+DIVISLAB,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+DIVISLAB,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.99
+DIVISLAB,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,80.8
+DIVISLAB,con,CON_13,P/E ratio of 69.95 is elevated and may indicate a demanding valuation,79.97
+DIVISLAB,con,CON_14,EV/EBITDA of 31.81 is elevated and indicates a demanding enterprise valuation,70.91
+DIVISLAB,con,CON_15,P/B ratio of 12.34 is elevated and warrants valuation monitoring,78.68
+DLF,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+DLF,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,86.0
+DLF,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+DLF,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,85.1
+DLF,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+DLF,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,70.4
+DLF,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,79.27
+DLF,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,82.78
+DLF,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,82.78
+DLF,con,CON_15,P/B ratio of 14.32 is elevated and warrants valuation monitoring,82.64
+DMART,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,78.8
+DMART,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+DMART,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+DMART,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,85.48
+DMART,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,88.73
+DMART,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,76.0
+DMART,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,70.04
+DMART,con,CON_13,P/E ratio of 72.53 is elevated and may indicate a demanding valuation,81.27
+DMART,con,CON_14,EV/EBITDA of 36.84 is elevated and indicates a demanding enterprise valuation,73.42
+DMART,con,CON_15,P/B ratio of 11.71 is elevated and warrants valuation monitoring,77.42
+DRREDDY,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,79.48
+DRREDDY,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,93.0
+DRREDDY,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+DRREDDY,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,76.0
+DRREDDY,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+DRREDDY,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,87.68
+DRREDDY,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,87.16
+DRREDDY,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,79.82
+DRREDDY,con,CON_15,P/B ratio of 10.19 is elevated and warrants valuation monitoring,74.38
+EICHERMOT,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,84.34
+EICHERMOT,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+EICHERMOT,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+EICHERMOT,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,72.0
+EICHERMOT,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+EICHERMOT,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+EICHERMOT,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.07
+EICHERMOT,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,88.4
+EICHERMOT,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,79.55
+EICHERMOT,con,CON_15,P/B ratio of 13.61 is elevated and warrants valuation monitoring,81.22
+GAIL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+GAIL,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+GAIL,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,78.68
+GAIL,con,CON_14,EV/EBITDA of 33.07 is elevated and indicates a demanding enterprise valuation,71.53
+GAIL,con,CON_15,P/B ratio of 9.54 is elevated and warrants valuation monitoring,73.08
+GODREJCP,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,92.98
+GODREJCP,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,79.77
+GODREJCP,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,72.95
 GODREJCP,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-GRASIM,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,95.46
-GRASIM,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,72.1
+GODREJCP,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,100.0
+GODREJCP,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+GODREJCP,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,100.0
+GODREJCP,con,CON_15,P/B ratio of 8.07 is elevated and warrants valuation monitoring,70.14
+GRASIM,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+GRASIM,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,95.46
 GRASIM,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-HAL,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
-HAL,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HAL,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-HAL,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,93.28
-HAVELLS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HAVELLS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-HCLTECH,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HDFCBANK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-HDFCBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70.85
+GRASIM,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,72.1
+GRASIM,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,72.1
+GRASIM,con,CON_13,P/E ratio of 79.35 is elevated and may indicate a demanding valuation,84.67
+HAL,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+HAL,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+HAL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HAL,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,84.0
+HAL,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HAL,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+HAL,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,93.28
+HAL,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,90.0
+HAL,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,71.35
+HAL,con,CON_13,P/E ratio of 71.89 is elevated and may indicate a demanding valuation,80.94
+HAVELLS,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,74.14
+HAVELLS,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,88.8
+HAVELLS,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HAVELLS,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HAVELLS,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+HAVELLS,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,88.37
+HAVELLS,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,70.5
+HAVELLS,con,CON_14,EV/EBITDA of 30.73 is elevated and indicates a demanding enterprise valuation,70.36
+HAVELLS,con,CON_15,P/B ratio of 14.08 is elevated and warrants valuation monitoring,82.16
+HCLTECH,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,86.02
+HCLTECH,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,99.2
+HCLTECH,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HCLTECH,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,80.28
+HCLTECH,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HCLTECH,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.62
+HCLTECH,con,CON_13,P/E ratio of 63.63 is elevated and may indicate a demanding valuation,76.81
+HCLTECH,con,CON_14,EV/EBITDA of 31.21 is elevated and indicates a demanding enterprise valuation,70.61
+HDFCBANK,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HDFCBANK,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+HDFCBANK,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+HDFCBANK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,70.85
+HDFCBANK,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,86.14
+HDFCBANK,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,79.15
 HDFCBANK,con,CON_1,Debt-to-equity ratio of 6.81 is elevated and warrants monitoring,100.0
-HDFCBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
-HDFCBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.99
-HDFCLIFE,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-HDFCLIFE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HDFCLIFE,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,80.17
+HDFCBANK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,76.99
+HDFCBANK,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+HDFCBANK,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+HDFCBANK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+HDFCBANK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,76.99
+HDFCBANK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+HDFCLIFE,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+HDFCLIFE,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HDFCLIFE,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,87.41
+HDFCLIFE,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,73.6
 HDFCLIFE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-HEROMOTOCO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-HEROMOTOCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HINDALCO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-HINDALCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HINDUNILVR,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-HINDUNILVR,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-HINDUNILVR,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-ICICIBANK,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-ICICIBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+HDFCLIFE,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,80.17
+HDFCLIFE,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+HDFCLIFE,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,80.17
+HDFCLIFE,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,83.8
+HDFCLIFE,con,CON_13,P/E ratio of 50.59 is elevated and may indicate a demanding valuation,70.3
+HDFCLIFE,con,CON_14,EV/EBITDA of 31.63 is elevated and indicates a demanding enterprise valuation,70.81
+HDFCLIFE,con,CON_15,P/B ratio of 11.28 is elevated and warrants valuation monitoring,76.56
+HEROMOTOCO,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,82.28
+HEROMOTOCO,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,98.2
+HEROMOTOCO,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HEROMOTOCO,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+HEROMOTOCO,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,76.43
+HEROMOTOCO,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HEROMOTOCO,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,88.63
+HEROMOTOCO,con,CON_13,P/E ratio of 53.86 is elevated and may indicate a demanding valuation,71.93
+HEROMOTOCO,con,CON_15,P/B ratio of 12.60 is elevated and warrants valuation monitoring,79.2
+HINDALCO,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HINDALCO,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+HINDALCO,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HINDALCO,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,71.29
+HINDALCO,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,71.2
+HINDALCO,con,CON_13,P/E ratio of 56.45 is elevated and may indicate a demanding valuation,73.22
+HINDALCO,con,CON_15,P/B ratio of 9.32 is elevated and warrants valuation monitoring,72.64
+HINDUNILVR,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,80.14
+HINDUNILVR,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,94.4
+HINDUNILVR,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+HINDUNILVR,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+HINDUNILVR,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,77.79
+HINDUNILVR,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+HINDUNILVR,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+HINDUNILVR,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,88.84
+HINDUNILVR,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,73.22
+HINDUNILVR,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,79.1
+HINDUNILVR,con,CON_15,P/B ratio of 11.88 is elevated and warrants valuation monitoring,77.76
+ICICIBANK,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,75.98
+ICICIBANK,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ICICIBANK,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+ICICIBANK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+ICICIBANK,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,97.78
+ICICIBANK,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,74.65
 ICICIBANK,con,CON_1,Debt-to-equity ratio of 6.45 is elevated and warrants monitoring,100.0
-ICICIBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
-ICICIBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,77.2
-ICICIGI,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-ICICIGI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ICICIGI,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-ICICIPRULI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ICICIPRULI,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,73.75
-INDIGO,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-INDIGO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-INDIGO,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-INDIGO,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
-INDUSINDBK,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-INDUSINDBK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,71.79
+ICICIBANK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,77.2
+ICICIBANK,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+ICICIBANK,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+ICICIBANK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+ICICIBANK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,77.2
+ICICIBANK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+ICICIBANK,con,CON_14,EV/EBITDA of 38.28 is elevated and indicates a demanding enterprise valuation,74.14
+ICICIGI,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,71.44
+ICICIGI,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,85.0
+ICICIGI,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ICICIGI,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+ICICIGI,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ICICIGI,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+ICICIGI,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.88
+ICICIGI,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,74.8
+ICICIGI,con,CON_14,EV/EBITDA of 36.96 is elevated and indicates a demanding enterprise valuation,73.48
+ICICIPRULI,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ICICIPRULI,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ICICIPRULI,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,85.64
+ICICIPRULI,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,76.81
+ICICIPRULI,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,73.75
+ICICIPRULI,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+ICICIPRULI,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+ICICIPRULI,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,73.75
+ICICIPRULI,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,86.24
+ICICIPRULI,con,CON_15,P/B ratio of 12.38 is elevated and warrants valuation monitoring,78.76
+INDIGO,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+INDIGO,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,89.0
+INDIGO,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+INDIGO,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+INDIGO,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+INDIGO,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+INDIGO,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+INDIGO,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.26
+INDIGO,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.85
+INDIGO,con,CON_13,P/E ratio of 76.23 is elevated and may indicate a demanding valuation,83.12
+INDUSINDBK,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+INDUSINDBK,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,96.86
+INDUSINDBK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,71.79
+INDUSINDBK,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,79.12
 INDUSINDBK,con,CON_1,Debt-to-equity ratio of 6.89 is elevated and warrants monitoring,100.0
-INDUSINDBK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.21
 INDUSINDBK,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-INFY,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-INFY,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-IOC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-IOC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
-IRCTC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,88.0
-IRCTC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-IRCTC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,96.95
-IRFC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-IRFC,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-IRFC,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
+INDUSINDBK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,76.21
+INDUSINDBK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+INDUSINDBK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,76.21
+INDUSINDBK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+INFY,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,99.58
+INFY,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+INFY,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+INFY,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,84.9
+INFY,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+INFY,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+INFY,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.2
+INFY,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,74.16
+INFY,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.0
+INFY,con,CON_14,EV/EBITDA of 36.70 is elevated and indicates a demanding enterprise valuation,73.35
+INFY,con,CON_15,P/B ratio of 8.97 is elevated and warrants valuation monitoring,71.94
+IOC,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,87.06
+IOC,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,82.62
+IOC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+IOC,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,72.87
+IOC,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+IOC,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,80.22
+IOC,con,CON_14,EV/EBITDA of 33.71 is elevated and indicates a demanding enterprise valuation,71.86
+IRCTC,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+IRCTC,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+IRCTC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+IRCTC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,88.0
+IRCTC,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,82.81
+IRCTC,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+IRCTC,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,96.95
+IRCTC,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.26
+IRCTC,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,92.04
+IRCTC,con,CON_13,P/E ratio of 60.44 is elevated and may indicate a demanding valuation,75.22
+IRCTC,con,CON_14,EV/EBITDA of 32.47 is elevated and indicates a demanding enterprise valuation,71.23
+IRFC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+IRFC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+IRFC,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,94.95
+IRFC,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+IRFC,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,80.22
+IRFC,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,88.12
+IRFC,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,71.6
 IRFC,con,CON_1,Debt-to-equity ratio of 8.38 is elevated and warrants monitoring,100.0
-IRFC,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
-IRFC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,82.81
-ITC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
-ITC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ITC,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
+IRFC,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,82.81
+IRFC,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+IRFC,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+IRFC,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,82.81
+IRFC,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+ITC,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,95.7
+ITC,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+ITC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ITC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,94.0
+ITC,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,99.55
+ITC,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ITC,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+ITC,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.84
+ITC,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,98.56
+ITC,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.8
+ITC,con,CON_16,Valuation monitoring flag: P/E ratio of 47.85 warrants attention,65.0
+JINDALSTEL,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,75.13
 JINDALSTEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+JINDALSTEL,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+JINDALSTEL,con,CON_13,P/E ratio of 77.64 is elevated and may indicate a demanding valuation,83.82
 JIOFIN,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
-JIOFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-JIOFIN,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-JIOFIN,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-JIOFIN,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,93.52
-JSWENERGY,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-JSWENERGY,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,80.22
-JSWENERGY,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,74.23
+JIOFIN,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+JIOFIN,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+JIOFIN,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+JIOFIN,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+JIOFIN,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,90.0
+JIOFIN,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+JIOFIN,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,72.95
+JIOFIN,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,96.55
+JIOFIN,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,93.52
+JIOFIN,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+JIOFIN,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,93.52
+JIOFIN,con,CON_15,P/B ratio of 9.91 is elevated and warrants valuation monitoring,73.82
+JSWENERGY,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+JSWENERGY,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,80.22
+JSWENERGY,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,70.04
 JSWENERGY,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
+JSWENERGY,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,75.16
+JSWENERGY,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,74.23
+JSWENERGY,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+JSWENERGY,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,74.23
+JSWENERGY,con,CON_14,EV/EBITDA of 35.95 is elevated and indicates a demanding enterprise valuation,72.97
+JSWENERGY,con,CON_15,P/B ratio of 9.88 is elevated and warrants valuation monitoring,73.76
+JSWSTEEL,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,72.2
 JSWSTEEL,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-KOTAKBANK,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,78.69
+JSWSTEEL,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+JSWSTEEL,con,CON_13,P/E ratio of 69.27 is elevated and may indicate a demanding valuation,79.63
+JSWSTEEL,con,CON_14,EV/EBITDA of 35.49 is elevated and indicates a demanding enterprise valuation,72.75
+KOTAKBANK,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+KOTAKBANK,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,78.69
+KOTAKBANK,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
 KOTAKBANK,con,CON_1,Debt-to-equity ratio of 4.00 is elevated and warrants monitoring,90.04
-KOTAKBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
-KOTAKBANK,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.42
+KOTAKBANK,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,76.42
+KOTAKBANK,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+KOTAKBANK,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+KOTAKBANK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+KOTAKBANK,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,76.42
+KOTAKBANK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+LICI,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+LICI,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
 LICI,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
-LICI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-LICI,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-LODHA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,72.0
+LICI,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+LICI,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+LICI,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+LICI,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,90.0
+LICI,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,76.35
+LICI,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,88.0
+LICI,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,70.64
+LICI,con,CON_15,P/B ratio of 8.10 is elevated and warrants valuation monitoring,70.2
+LODHA,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,72.0
+LODHA,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,72.37
+LODHA,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,70.12
+LODHA,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,77.75
 LODHA,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-LTIM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-LTIM,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-M&M,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,72.35
+LODHA,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,73.3
+LODHA,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+LODHA,con,CON_13,P/E ratio of 51.95 is elevated and may indicate a demanding valuation,70.97
+LODHA,con,CON_14,EV/EBITDA of 34.33 is elevated and indicates a demanding enterprise valuation,72.16
+LT,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+LT,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,74.36
+LT,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+LT,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+LT,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,85.86
+LT,con,CON_16,Valuation monitoring flag: P/E ratio of 30.80 warrants attention,65.0
+LTIM,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,85.8
+LTIM,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+LTIM,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+LTIM,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+LTIM,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+LTIM,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,85.86
+LTIM,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,79.65
+LTIM,con,CON_13,P/E ratio of 64.52 is elevated and may indicate a demanding valuation,77.26
+M&M,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,77.08
+M&M,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,93.96
+M&M,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+M&M,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,72.35
 M&M,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-MARUTI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-MOTHERSON,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-NAUKRI,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
-NAUKRI,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-NAUKRI,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,89.05
+MARUTI,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,71.5
+MARUTI,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,87.34
+MARUTI,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+MARUTI,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+MARUTI,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.94
+MARUTI,con,CON_15,P/B ratio of 8.26 is elevated and warrants valuation monitoring,70.52
+MOTHERSON,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+MOTHERSON,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+MOTHERSON,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,73.0
+MOTHERSON,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,77.76
+MOTHERSON,con,CON_14,EV/EBITDA of 33.39 is elevated and indicates a demanding enterprise valuation,71.69
+NAUKRI,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,76.0
+NAUKRI,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+NAUKRI,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.68
+NAUKRI,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,86.92
+NAUKRI,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.95
 NAUKRI,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-NESTLEIND,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-NESTLEIND,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-NESTLEIND,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70.88
-NHPC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-NHPC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-NHPC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,76.99
-NTPC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
-ONGC,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-PFC,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,94.0
+NAUKRI,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,94.09
+NAUKRI,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,89.05
+NAUKRI,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+NAUKRI,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,89.05
+NAUKRI,con,CON_15,P/B ratio of 8.33 is elevated and warrants valuation monitoring,70.66
+NESTLEIND,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+NESTLEIND,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+NESTLEIND,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+NESTLEIND,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,80.19
+NESTLEIND,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+NESTLEIND,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+NESTLEIND,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,70.88
+NESTLEIND,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,85.87
+NESTLEIND,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,72.24
+NESTLEIND,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,76.75
+NESTLEIND,con,CON_13,P/E ratio of 54.96 is elevated and may indicate a demanding valuation,72.48
+NESTLEIND,con,CON_15,P/B ratio of 14.34 is elevated and warrants valuation monitoring,82.68
+NHPC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+NHPC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+NHPC,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+NHPC,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+NHPC,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,76.99
+NHPC,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,76.99
+NHPC,con,CON_13,P/E ratio of 71.17 is elevated and may indicate a demanding valuation,80.59
+NHPC,con,CON_15,P/B ratio of 13.74 is elevated and warrants valuation monitoring,81.48
+NTPC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+NTPC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,78.0
+NTPC,con,CON_14,EV/EBITDA of 37.12 is elevated and indicates a demanding enterprise valuation,73.56
+ONGC,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,73.88
+ONGC,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,79.42
+ONGC,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ONGC,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ONGC,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,71.82
+ONGC,con,CON_15,P/B ratio of 10.36 is elevated and warrants valuation monitoring,74.72
+PFC,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,92.32
+PFC,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,94.0
+PFC,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,96.74
+PFC,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,97.84
 PFC,con,CON_1,Debt-to-equity ratio of 8.52 is elevated and warrants monitoring,100.0
-PFC,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
-PFC,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,70.12
 PFC,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-PIDILITIND,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+PFC,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,70.12
+PFC,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+PFC,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+PFC,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,70.12
+PFC,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+PIDILITIND,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,81.56
+PIDILITIND,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,99.4
+PIDILITIND,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+PIDILITIND,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+PIDILITIND,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,88.18
+PIDILITIND,con,CON_15,P/B ratio of 12.30 is elevated and warrants valuation monitoring,78.6
+PNB,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+PNB,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,97.7
 PNB,con,CON_1,Debt-to-equity ratio of 3.68 is elevated and warrants monitoring,86.84
-PNB,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,95.11
 PNB,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-POWERGRID,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-POWERGRID,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-RECLTD,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
-RECLTD,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.34
+PNB,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,95.11
+PNB,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+PNB,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,95.11
+PNB,con,CON_15,P/B ratio of 10.91 is elevated and warrants valuation monitoring,75.82
+POWERGRID,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,75.74
+POWERGRID,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+POWERGRID,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+POWERGRID,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,77.42
+POWERGRID,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+POWERGRID,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,100.0
+POWERGRID,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,72.95
+POWERGRID,con,CON_13,P/E ratio of 64.39 is elevated and may indicate a demanding valuation,77.19
+RECLTD,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,80.8
+RECLTD,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,100.0
+RECLTD,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,96.59
+RECLTD,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,79.34
+RECLTD,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,99.54
 RECLTD,con,CON_1,Debt-to-equity ratio of 6.42 is elevated and warrants monitoring,100.0
 RECLTD,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-RELIANCE,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-RELIANCE,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,71.17
+RECLTD,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+RECLTD,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+RELIANCE,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+RELIANCE,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+RELIANCE,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,78.55
+RELIANCE,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,70.12
+RELIANCE,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,71.17
+RELIANCE,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,71.17
+RELIANCE,con,CON_13,P/E ratio of 58.34 is elevated and may indicate a demanding valuation,74.17
 SBILIFE,pro,PRO_3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,95.0
-SBILIFE,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SBILIFE,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+SBILIFE,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,90.0
 SBILIFE,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-SHREECEM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-SHREECEM,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-SHRIRAMFIN,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
+SBILIFE,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,100.0
+SBILIFE,con,CON_8,Negative free cash flow conversion indicates weak conversion of operating cash into free cash flow,85.0
+SBILIFE,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,84.28
+SBILIFE,con,CON_13,P/E ratio of 69.98 is elevated and may indicate a demanding valuation,79.99
+SBILIFE,con,CON_14,EV/EBITDA of 31.04 is elevated and indicates a demanding enterprise valuation,70.52
+SBILIFE,con,CON_15,P/B ratio of 9.48 is elevated and warrants valuation monitoring,72.96
+SHREECEM,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+SHREECEM,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,73.82
+SHREECEM,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+SHREECEM,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+SHREECEM,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.8
+SHREECEM,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,73.5
+SHREECEM,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,74.89
+SHRIRAMFIN,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,70.24
+SHRIRAMFIN,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,78.0
+SHRIRAMFIN,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,95.41
+SHRIRAMFIN,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,80.66
 SHRIRAMFIN,con,CON_1,Debt-to-equity ratio of 3.99 is elevated and warrants monitoring,89.94
-SHRIRAMFIN,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
 SHRIRAMFIN,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-SIEMENS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-SIEMENS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-SIEMENS,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.29
-SUNPHARMA,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,76.0
-SUNPHARMA,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-SUNPHARMA,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-SUNPHARMA,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,98.92
-TATACONSUM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-TATAMOTORS,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-TATASTEEL,con,CON_10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,78.94
-TCS,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,74.0
-TCS,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-TECHM,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-TECHM,con,CON_7,"Dividend payout ratio above 100% means the company is paying dividends from reserves, which is unsustainable",90.0
-TITAN,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-TITAN,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79.01
-TORNTPHARM,pro,PRO_5,Operating profit margin above 25% indicates strong pricing power and cost discipline,82.0
-TORNTPHARM,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
-TRENT,pro,PRO_8,Consistent dividend yield above 2% backed by positive free cash flow,90.0
-TRENT,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
-TVSMOTOR,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,78.27
+SHRIRAMFIN,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+SHRIRAMFIN,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+SHRIRAMFIN,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
+SHRIRAMFIN,con,CON_13,P/E ratio of 68.53 is elevated and may indicate a demanding valuation,79.27
+SIEMENS,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,75.4
+SIEMENS,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,91.2
+SIEMENS,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+SIEMENS,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,79.97
+SIEMENS,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+SIEMENS,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+SIEMENS,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,79.29
+SIEMENS,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,89.27
+SIEMENS,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,75.95
+SIEMENS,con,CON_14,EV/EBITDA of 30.88 is elevated and indicates a demanding enterprise valuation,70.44
+SIEMENS,con,CON_15,P/B ratio of 9.25 is elevated and warrants valuation monitoring,72.5
+SUNPHARMA,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,70.18
+SUNPHARMA,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,74.6
+SUNPHARMA,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+SUNPHARMA,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,76.0
+SUNPHARMA,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,91.86
+SUNPHARMA,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+SUNPHARMA,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+SUNPHARMA,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,98.92
+SUNPHARMA,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,87.94
+SUNPHARMA,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,79.64
+SUNPHARMA,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,76.9
+SUNPHARMA,con,CON_16,Valuation monitoring flag: P/E ratio of 37.90 warrants attention,65.0
+TATACONSUM,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TATACONSUM,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+TATACONSUM,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,81.34
+TATACONSUM,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,77.29
+TATACONSUM,con,CON_13,P/E ratio of 54.79 is elevated and may indicate a demanding valuation,72.39
+TATAMOTORS,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+TATAMOTORS,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,80.2
+TATAMOTORS,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TATAMOTORS,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,78.23
+TATAMOTORS,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+TATAMOTORS,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,75.75
+TATAMOTORS,con,CON_13,P/E ratio of 67.07 is elevated and may indicate a demanding valuation,78.53
+TATAPOWER,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TATAPOWER,con,CON_16,Positive free cash flow with a low dividend yield represents a shareholder-distribution factor to monitor,65.0
+TATASTEEL,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TATASTEEL,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,100.0
+TATASTEEL,con,CON_4,Return on capital employed below 10% indicates relatively weak capital efficiency,78.94
+TATASTEEL,con,CON_10,Return on capital employed below 10% suggests relatively weak returns on invested capital,78.94
+TATASTEEL,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,98.56
+TATASTEEL,con,CON_14,EV/EBITDA of 38.87 is elevated and indicates a demanding enterprise valuation,74.44
+TATASTEEL,con,CON_15,P/B ratio of 9.23 is elevated and warrants valuation monitoring,72.46
+TCS,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+TCS,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,100.0
+TCS,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TCS,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,74.0
+TCS,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+TCS,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+TCS,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.46
+TCS,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,78.28
+TCS,con,CON_13,P/E ratio of 78.69 is elevated and may indicate a demanding valuation,84.34
+TECHM,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TECHM,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,84.66
+TECHM,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+TECHM,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,86.2
+TECHM,con,CON_3,Return on equity below 10% indicates relatively weak shareholder capital efficiency,73.03
+TECHM,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,73.0
+TECHM,con,CON_7,Dividend payout ratio above 100% indicates distributions exceed reported earnings and warrants monitoring,90.0
+TECHM,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,71.56
+TECHM,con,CON_13,P/E ratio of 57.40 is elevated and may indicate a demanding valuation,73.7
+TITAN,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+TITAN,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,85.4
+TITAN,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TITAN,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,89.42
+TITAN,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+TITAN,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,79.01
+TITAN,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,73.0
+TITAN,con,CON_15,P/B ratio of 10.51 is elevated and warrants valuation monitoring,75.02
+TORNTPHARM,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,88.3
+TORNTPHARM,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,86.4
+TORNTPHARM,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TORNTPHARM,pro,PRO_5,Operating profit margin above 25% indicates strong operating profitability,82.0
+TORNTPHARM,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,92.55
+TORNTPHARM,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+TORNTPHARM,pro,PRO_11,Net profit margin above 15% indicates healthy bottom-line profitability,70.88
+TORNTPHARM,con,CON_16,Valuation monitoring flag: P/E ratio of 46.40 warrants attention,65.0
+TRENT,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,100.0
+TRENT,pro,PRO_2,Return on capital employed above 15% indicates efficient capital utilization,87.6
+TRENT,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+TRENT,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,76.17
+TRENT,pro,PRO_8,Dividend yield above 2% backed by positive free cash flow provides evidence of cash-supported shareholder distributions,90.0
+TRENT,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,100.0
+TRENT,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,72.76
+TRENT,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,74.8
+TRENT,con,CON_14,EV/EBITDA of 34.65 is elevated and indicates a demanding enterprise valuation,72.33
+TRENT,con,CON_15,P/B ratio of 11.82 is elevated and warrants valuation monitoring,77.64
+TVSMOTOR,pro,PRO_1,Return on equity above 15% indicates efficient use of shareholder capital,92.44
+TVSMOTOR,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,100.0
+TVSMOTOR,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,78.27
+TVSMOTOR,pro,PRO_12,Dividend yield of at least 2.5% provides a meaningful shareholder income signal,72.85
 TVSMOTOR,con,CON_1,Debt-to-equity ratio of 3.83 is elevated and warrants monitoring,88.33
 TVSMOTOR,con,CON_2,Free cash flow is negative and raises concern about cash generation quality,75.0
-ULTRACEMCO,pro,PRO_7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
-ULTRACEMCO,pro,PRO_9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85.05
+TVSMOTOR,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+TVSMOTOR,con,CON_12,Net profit margin below 5% indicates limited bottom-line profitability,71.84
+ULTRACEMCO,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+ULTRACEMCO,pro,PRO_7,Very high interest coverage indicates strong ability to service interest obligations,90.0
+ULTRACEMCO,pro,PRO_9,EPS growing above 15% CAGR indicates strong historical earnings compounding,85.05
+ULTRACEMCO,pro,PRO_10,Debt-to-equity below 0.5 indicates relatively low financial leverage,82.43
+UNIONBANK,pro,PRO_4,Positive free cash flow indicates the business is generating cash after capital investment,85.0
+UNIONBANK,pro,PRO_6,Free cash flow conversion above 50% indicates strong conversion of operating cash flow into free cash flow,91.5
 UNIONBANK,con,CON_1,Debt-to-equity ratio of 12.82 is elevated and warrants monitoring,100.0
-UNIONBANK,con,CON_6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,90.0
+UNIONBANK,con,CON_5,Operating profit margin below 10% indicates relatively weak operating profitability,85.0
+UNIONBANK,con,CON_6,Interest coverage ratio below 1.5x indicates limited headroom for servicing interest obligations,90.0
+UNIONBANK,con,CON_9,High leverage flag indicates elevated balance-sheet leverage that warrants monitoring,90.0
+UNIONBANK,con,CON_11,Interest coverage warning indicates potential pressure on debt-servicing capacity,90.0
 ATGL,data_unavailable,SOURCE_MISSING,Financial ratio source data is unavailable; no unsupported pros/cons were generated,
 SBIN,data_unavailable,SOURCE_MISSING,Financial ratio source data is unavailable; no unsupported pros/cons were generated,

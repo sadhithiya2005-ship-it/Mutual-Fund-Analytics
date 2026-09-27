@@ -1,0 +1,27 @@
+SPRINT 5 DAY 29 — CAGR CROSS-VALIDATION NOTE
+
+The analysis.xlsx source contains:
+- compounded_sales_growth
+- compounded_profit_growth
+- stock_price_cagr
+- roe
+
+The Ratio Engine output (output/cagr_analysis.csv) currently contains:
+- EPS CAGR (3-year, 5-year, and 10-year)
+
+Because the source metrics and computed metrics are different,
+sales CAGR, profit CAGR, and stock-price CAGR are not directly
+cross-validated against EPS CAGR.
+
+No unsupported metric comparison was performed.
+
+Parsed analysis output:
+- output/analysis_parsed.csv
+- output/parse_failures.csv
+
+Analysis source coverage:
+- 5 companies
+- 63 parsed records
+- 17 parse failures
+
+The parse failures are retained separately for manual review.

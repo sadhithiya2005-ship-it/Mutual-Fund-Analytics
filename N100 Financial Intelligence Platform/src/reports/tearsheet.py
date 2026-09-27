@@ -4,18 +4,16 @@ Company tearsheet generator for the N100 Financial Intelligence Platform.
 Generates a two-page PDF company tearsheet using the financial data
 available in the current project sources.
 
-Source limitations:
-- Revenue is unavailable.
-- Absolute net profit/PAT is unavailable.
-- Balance-sheet history is unavailable.
-- Complete CFI/CFF history is unavailable.
+The report uses only source data available in the project.
+Missing financial values are never fabricated.
 """
 
 from pathlib import Path
 import re
+import tempfile
 
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
@@ -23,6 +21,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import (
+    Image,
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
@@ -44,6 +43,10 @@ CASHFLOW_FILE = ROOT / "output" / "cashflow_intelligence.xlsx"
 
 OUTPUT_DIR = ROOT / "output" / "reports" / "tearsheets"
 
+
+# ============================================================
+# SAFE FORMATTERS
+# ============================================================
 
 def safe_number(value, decimals=2):
     """Format numeric values safely."""
@@ -75,32 +78,9 @@ def clean_text(value):
     return str(value)
 
 
-def parse_year_value(value):
-    """Convert different year formats into a sortable datetime."""
-    if pd.isna(value):
-        return pd.NaT
-
-    text = str(value).strip()
-
-    parsed = pd.to_datetime(
-        text,
-        errors="coerce",
-    )
-
-    if pd.notna(parsed):
-        return parsed
-
-    match = re.search(r"(20\d{2}|19\d{2})", text)
-
-    if match:
-        return pd.to_datetime(
-            match.group(1),
-            format="%Y",
-            errors="coerce",
-        )
-
-    return pd.NaT
-
+# ============================================================
+# SOURCE LOADING
+# ============================================================
 
 def load_sources():
     """Load all available source datasets."""
@@ -120,21 +100,21 @@ def load_sources():
         header=0,
     )
 
-    pros_cons = pd.DataFrame()
+    pros_cons = None
 
     if PROS_CONS_FILE.exists():
         pros_cons = pd.read_csv(
             PROS_CONS_FILE,
         )
 
-    cagr = pd.DataFrame()
+    cagr = None
 
     if CAGR_FILE.exists():
         cagr = pd.read_csv(
             CAGR_FILE,
         )
 
-    cashflow = pd.DataFrame()
+    cashflow = None
 
     if CASHFLOW_FILE.exists():
         cashflow = pd.read_excel(
@@ -151,6 +131,10 @@ def load_sources():
     )
 
 
+# ============================================================
+# COMPANY DATA
+# ============================================================
+
 def get_company_data(company_id, sources):
     """Collect available data for one company."""
 
@@ -164,40 +148,37 @@ def get_company_data(company_id, sources):
     ) = sources
 
     company_rows = companies[
-        companies["id"].astype(str).str.strip()
-        == str(company_id).strip()
-    ].copy()
+        companies["id"].astype(str) == str(company_id)
+    ]
 
     ratio_rows = ratios[
-        ratios["company_id"].astype(str).str.strip()
-        == str(company_id).strip()
+        ratios["company_id"].astype(str) == str(company_id)
     ].copy()
 
     market_rows = market_cap[
-        market_cap["company_id"].astype(str).str.strip()
-        == str(company_id).strip()
+        market_cap["company_id"].astype(str) == str(company_id)
     ].copy()
 
-    if not pros_cons.empty:
+    if pros_cons is not None:
         signal_rows = pros_cons[
-            pros_cons["company_id"].astype(str).str.strip()
-            == str(company_id).strip()
+            pros_cons["company_id"].astype(str)
+            == str(company_id)
         ].copy()
     else:
         signal_rows = pd.DataFrame()
 
-    if not cagr.empty:
+    if cagr is not None:
         cagr_rows = cagr[
-            cagr["company_id"].astype(str).str.strip()
-            == str(company_id).strip()
+            cagr["company_id"].astype(str)
+            == str(company_id)
         ].copy()
     else:
         cagr_rows = pd.DataFrame()
 
-    if not cashflow.empty:
+    if cashflow is not None:
         cashflow_rows = cashflow[
-            cashflow["company_id"].astype(str).str.strip()
-            == str(company_id).strip()
+            cashflow["company_id"].astype(str)
+            == str(company_id)
         ].copy()
     else:
         cashflow_rows = pd.DataFrame()
@@ -213,7 +194,7 @@ def get_company_data(company_id, sources):
 
 
 def latest_row(df):
-    """Return latest row based on the year field."""
+    """Return latest row based on year field."""
 
     if df.empty:
         return None
@@ -223,8 +204,9 @@ def latest_row(df):
     if "year" not in work.columns:
         return work.iloc[-1]
 
-    work["_year_date"] = work["year"].apply(
-        parse_year_value
+    work["_year_date"] = pd.to_datetime(
+        work["year"],
+        errors="coerce",
     )
 
     work = work.sort_values(
@@ -234,6 +216,10 @@ def latest_row(df):
 
     return work.iloc[-1]
 
+
+# ============================================================
+# PDF STYLES
+# ============================================================
 
 def make_styles():
     """Create PDF paragraph styles."""
@@ -295,19 +281,538 @@ def make_styles():
     }
 
 
-def make_kpi_table(
-    latest,
-    market_latest,
-    cagr_latest,
-    company,
+# ============================================================
+# CHART HELPERS
+# ============================================================
+
+def _save_chart(fig, prefix):
+    """
+    Save a matplotlib figure as a high-resolution PNG.
+
+    A temporary file is used so generated chart files do not
+    remain in the project output folder.
+    """
+
+    temp_file = tempfile.NamedTemporaryFile(
+        prefix=f"{prefix}_",
+        suffix=".png",
+        delete=False,
+    )
+
+    chart_path = Path(temp_file.name)
+    temp_file.close()
+
+    fig.savefig(
+        chart_path,
+        dpi=220,
+        bbox_inches="tight",
+        format="png",
+    )
+
+    plt.close(fig)
+
+    return chart_path
+
+
+def create_trend_chart(ratios, company_id):
+    """
+    Create a historical OPM / ROE / ROCE trend chart.
+
+    Only source values are plotted.
+    Missing values are left as missing.
+    """
+
+    if ratios.empty:
+        return None
+
+    work = ratios.copy()
+
+    if "year" not in work.columns:
+        return None
+
+    work["_year_date"] = pd.to_datetime(
+        work["year"],
+        errors="coerce",
+    )
+
+    work = work.sort_values(
+        "_year_date",
+        na_position="last",
+    ).tail(10)
+
+    if work.empty:
+        return None
+
+    fig, ax = plt.subplots(
+        figsize=(10, 4.8),
+    )
+
+    plotted = False
+
+    if "operating_profit_margin_pct" in work.columns:
+        values = pd.to_numeric(
+            work["operating_profit_margin_pct"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="o",
+                linewidth=2,
+                label="Operating Profit Margin",
+            )
+            plotted = True
+
+    if "return_on_equity_pct" in work.columns:
+        values = pd.to_numeric(
+            work["return_on_equity_pct"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="s",
+                linewidth=2,
+                label="ROE",
+            )
+            plotted = True
+
+    if "roce_percentage" in work.columns:
+        values = pd.to_numeric(
+            work["roce_percentage"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="^",
+                linewidth=2,
+                label="ROCE",
+            )
+            plotted = True
+
+    if not plotted:
+        plt.close(fig)
+        return None
+
+    ax.set_title(
+        f"{company_id} - Historical Profitability & Return Trend",
+        fontsize=13,
+        fontweight="bold",
+    )
+
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Percentage")
+    ax.grid(
+        True,
+        alpha=0.25,
+    )
+
+    ax.legend(
+        loc="best",
+        fontsize=8,
+    )
+
+    fig.tight_layout()
+
+    return _save_chart(
+        fig,
+        f"{company_id}_trend",
+    )
+
+
+def create_fcf_chart(cashflow, company_id):
+    """
+    Create a historical CFO / CapEx / FCF chart.
+
+    Only available cash-flow source values are plotted.
+    """
+
+    if cashflow.empty:
+        return None
+
+    work = cashflow.copy()
+
+    if "year" not in work.columns:
+        return None
+
+    work["_year_date"] = pd.to_datetime(
+        work["year"],
+        errors="coerce",
+    )
+
+    work = work.sort_values(
+        "_year_date",
+        na_position="last",
+    ).tail(10)
+
+    if work.empty:
+        return None
+
+    fig, ax = plt.subplots(
+        figsize=(10, 4.8),
+    )
+
+    plotted = False
+
+    if "cash_from_operations_cr" in work.columns:
+        values = pd.to_numeric(
+            work["cash_from_operations_cr"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="o",
+                linewidth=2,
+                label="CFO",
+            )
+            plotted = True
+
+    if "capex_cr" in work.columns:
+        values = pd.to_numeric(
+            work["capex_cr"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="s",
+                linewidth=2,
+                label="CapEx",
+            )
+            plotted = True
+
+    if "free_cash_flow_calculated_cr" in work.columns:
+        values = pd.to_numeric(
+            work["free_cash_flow_calculated_cr"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="^",
+                linewidth=2,
+                label="Free Cash Flow",
+            )
+            plotted = True
+
+    if not plotted:
+        plt.close(fig)
+        return None
+
+    ax.set_title(
+        f"{company_id} - Cash Flow Trend",
+        fontsize=13,
+        fontweight="bold",
+    )
+
+    ax.set_xlabel("Year")
+    ax.set_ylabel("₹ Crore")
+    ax.grid(
+        True,
+        alpha=0.25,
+    )
+
+    ax.legend(
+        loc="best",
+        fontsize=8,
+    )
+
+    fig.tight_layout()
+
+    return _save_chart(
+        fig,
+        f"{company_id}_cashflow",
+    )
+
+
+def create_market_chart(market, company_id):
+    """
+    Create a valuation-history chart using available market-cap
+    source records.
+    """
+
+    if market.empty:
+        return None
+
+    work = market.copy()
+
+    if "year" not in work.columns:
+        return None
+
+    work["year_numeric"] = pd.to_numeric(
+        work["year"],
+        errors="coerce",
+    )
+
+    work = work.sort_values(
+        "year_numeric",
+    ).tail(10)
+
+    if work.empty:
+        return None
+
+    fig, ax = plt.subplots(
+        figsize=(10, 4.8),
+    )
+
+    plotted = False
+
+    if "pe_ratio" in work.columns:
+        values = pd.to_numeric(
+            work["pe_ratio"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="o",
+                linewidth=2,
+                label="P/E",
+            )
+            plotted = True
+
+    if "pb_ratio" in work.columns:
+        values = pd.to_numeric(
+            work["pb_ratio"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="s",
+                linewidth=2,
+                label="P/B",
+            )
+            plotted = True
+
+    if "ev_ebitda" in work.columns:
+        values = pd.to_numeric(
+            work["ev_ebitda"],
+            errors="coerce",
+        )
+
+        if values.notna().any():
+            ax.plot(
+                work["year"].astype(str),
+                values,
+                marker="^",
+                linewidth=2,
+                label="EV/EBITDA",
+            )
+            plotted = True
+
+    if not plotted:
+        plt.close(fig)
+        return None
+
+    ax.set_title(
+        f"{company_id} - Historical Valuation Multiples",
+        fontsize=13,
+        fontweight="bold",
+    )
+
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Multiple")
+    ax.grid(
+        True,
+        alpha=0.25,
+    )
+
+    ax.legend(
+        loc="best",
+        fontsize=8,
+    )
+
+    fig.tight_layout()
+
+    return _save_chart(
+        fig,
+        f"{company_id}_valuation",
+    )
+
+
+def create_data_availability_chart(
+    company_id,
+    market,
+    cagr,
+    cashflow,
 ):
+    """
+    Create a source-availability chart for companies where
+    financial-ratio records are unavailable.
+
+    Values are binary source-presence indicators and do not
+    represent financial performance.
+    """
+
+    labels = [
+        "Company Master",
+        "Market Cap",
+        "CAGR",
+        "Cash Flow",
+    ]
+
+    values = [
+        1,
+        int(not market.empty),
+        int(not cagr.empty),
+        int(not cashflow.empty),
+    ]
+
+    fig, ax = plt.subplots(
+        figsize=(10, 4.8),
+    )
+
+    ax.bar(
+        labels,
+        values,
+    )
+
+    ax.set_ylim(
+        0,
+        1.2,
+    )
+
+    ax.set_yticks(
+        [0, 1],
+    )
+
+    ax.set_yticklabels(
+        ["Unavailable", "Available"],
+    )
+
+    ax.set_title(
+        f"{company_id} - Source Data Availability",
+        fontsize=13,
+        fontweight="bold",
+    )
+
+    ax.grid(
+        axis="y",
+        alpha=0.25,
+    )
+
+    fig.tight_layout()
+
+    return _save_chart(
+        fig,
+        f"{company_id}_availability",
+    )
+
+
+# ============================================================
+# TABLES
+# ============================================================
+
+def make_unavailable_table(message):
+    """Create a table explaining unavailable financial data."""
+
+    data = [
+        [
+            Paragraph(
+                "<b>Data Status</b>",
+                ParagraphStyle(
+                    "UnavailableHeader",
+                    fontSize=8,
+                ),
+            ),
+            Paragraph(
+                "<b>Details</b>",
+                ParagraphStyle(
+                    "UnavailableHeader2",
+                    fontSize=8,
+                ),
+            ),
+        ],
+        [
+            "Financial ratios",
+            message,
+        ],
+        [
+            "Data handling",
+            "Missing values are not estimated or fabricated.",
+        ],
+        [
+            "Report status",
+            "Partial source-data tearsheet",
+        ],
+    ]
+
+    table = Table(
+        data,
+        colWidths=[
+            50 * mm,
+            120 * mm,
+        ],
+    )
+
+    table.setStyle(
+        TableStyle(
+            [
+                (
+                    "GRID",
+                    (0, 0),
+                    (-1, -1),
+                    0.5,
+                    colors.lightgrey,
+                ),
+                (
+                    "BACKGROUND",
+                    (0, 0),
+                    (-1, 0),
+                    colors.whitesmoke,
+                ),
+                (
+                    "FONTNAME",
+                    (0, 0),
+                    (0, -1),
+                    "Helvetica-Bold",
+                ),
+                (
+                    "VALIGN",
+                    (0, 0),
+                    (-1, -1),
+                    "TOP",
+                ),
+                (
+                    "FONTSIZE",
+                    (0, 0),
+                    (-1, -1),
+                    8,
+                ),
+            ]
+        )
+    )
+
+    return table
+
+
+def make_kpi_table(latest, market_latest, cagr_latest):
     """Create KPI tile-style table."""
 
     kpis = [
         (
             "ROCE",
             safe_percent(
-                company.get("roce_percentage")
+                latest.get("roce_pct")
             ),
         ),
         (
@@ -331,8 +836,11 @@ def make_kpi_table(
         (
             "Free Cash Flow",
             safe_number(
-                latest.get("free_cash_flow_cr")
-            ) + " Cr",
+                latest.get(
+                    "free_cash_flow_cr"
+                )
+            )
+            + " Cr",
         ),
         (
             "P/E",
@@ -353,7 +861,9 @@ def make_kpi_table(
         (
             "EPS CAGR 5Y",
             safe_percent(
-                cagr_latest.get("eps_cagr_5yr_pct")
+                cagr_latest.get(
+                    "eps_cagr_5yr_pct"
+                )
                 if cagr_latest is not None
                 else pd.NA
             ),
@@ -367,7 +877,7 @@ def make_kpi_table(
             Paragraph(
                 f"<b>{label}</b><br/>{value}",
                 ParagraphStyle(
-                    f"KPI_{label}",
+                    "KPI",
                     fontSize=8,
                     leading=12,
                     alignment=TA_CENTER,
@@ -425,114 +935,32 @@ def make_kpi_table(
     )
 
     return table
-def create_trend_chart(ratios, company_id):
-    """Create a financial trend chart and return its file path."""
 
-    work = ratios.copy()
 
-    work["_year_date"] = work["year"].apply(
-        parse_year_value
-    )
-
-    work = work.dropna(
-        subset=["_year_date"]
-    ).sort_values(
-        "_year_date"
-    ).tail(10)
-
-    if work.empty:
-        return None
-
-    chart_dir = (
-        ROOT
-        / "output"
-        / "reports"
-        / "charts"
-    )
-
-    chart_dir.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    chart_file = (
-        chart_dir
-        / f"{company_id}_trend.png"
-    )
-
-    years = [
-        str(value.year)
-        for value in work["_year_date"]
-    ]
-
-    opm = pd.to_numeric(
-        work["operating_profit_margin_pct"],
-        errors="coerce",
-    )
-
-    roe = pd.to_numeric(
-        work["return_on_equity_pct"],
-        errors="coerce",
-    )
-
-    plt.figure(
-        figsize=(8, 3.2)
-    )
-
-    plt.plot(
-        years,
-        opm,
-        marker="o",
-        label="Operating Profit Margin",
-    )
-
-    plt.plot(
-        years,
-        roe,
-        marker="o",
-        label="Return on Equity",
-    )
-
-    plt.title(
-        f"{company_id} - 10-Year Available Trend"
-    )
-
-    plt.xlabel("Year")
-    plt.ylabel("Percentage")
-
-    plt.xticks(
-        rotation=45,
-        ha="right",
-    )
-
-    plt.grid(
-        True,
-        alpha=0.3,
-    )
-
-    plt.legend(
-        fontsize=7,
-    )
-
-    plt.tight_layout()
-
-    plt.savefig(
-        chart_file,
-        dpi=180,
-        bbox_inches="tight",
-    )
-
-    plt.close()
-
-    return chart_file
-
-def make_trend_table(ratios, company):
+def make_trend_table(ratios):
     """Create a compact historical trend table."""
 
+    if ratios.empty:
+        return Table(
+            [
+                [
+                    Paragraph(
+                        "<b>Financial trend unavailable</b>",
+                        ParagraphStyle(
+                            "TrendUnavailable",
+                            fontSize=8,
+                        ),
+                    )
+                ]
+            ],
+            colWidths=[170 * mm],
+        )
+
     work = ratios.copy()
 
-    work["_year_date"] = work["year"].apply(
-        parse_year_value
+    work["_year_date"] = pd.to_datetime(
+        work["year"],
+        errors="coerce",
     )
 
     work = work.sort_values(
@@ -540,33 +968,42 @@ def make_trend_table(ratios, company):
         na_position="last",
     ).tail(10)
 
-    header_style = ParagraphStyle(
-        "TrendHeader",
-        fontSize=7,
-        leading=9,
-    )
-
     data = [
         [
             Paragraph(
                 "<b>Year</b>",
-                header_style,
+                ParagraphStyle(
+                    "h1",
+                    fontSize=7,
+                ),
             ),
             Paragraph(
                 "<b>OPM</b>",
-                header_style,
+                ParagraphStyle(
+                    "h2",
+                    fontSize=7,
+                ),
             ),
             Paragraph(
                 "<b>ROE</b>",
-                header_style,
+                ParagraphStyle(
+                    "h3",
+                    fontSize=7,
+                ),
             ),
             Paragraph(
                 "<b>ROCE</b>",
-                header_style,
+                ParagraphStyle(
+                    "h4",
+                    fontSize=7,
+                ),
             ),
             Paragraph(
                 "<b>FCF (Cr)</b>",
-                header_style,
+                ParagraphStyle(
+                    "h5",
+                    fontSize=7,
+                ),
             ),
         ]
     ]
@@ -574,9 +1011,7 @@ def make_trend_table(ratios, company):
     for _, row in work.iterrows():
         data.append(
             [
-                clean_text(
-                    row.get("year")
-                ),
+                clean_text(row["year"]),
                 safe_percent(
                     row.get(
                         "operating_profit_margin_pct"
@@ -588,7 +1023,7 @@ def make_trend_table(ratios, company):
                     )
                 ),
                 safe_percent(
-                    company.get(
+                    row.get(
                         "roce_percentage"
                     )
                 ),
@@ -637,12 +1072,6 @@ def make_trend_table(ratios, company):
                     (-1, -1),
                     "RIGHT",
                 ),
-                (
-                    "VALIGN",
-                    (0, 0),
-                    (-1, -1),
-                    "MIDDLE",
-                ),
             ]
         ),
     )
@@ -688,17 +1117,17 @@ def make_pros_cons(signals, styles):
 
         for _, row in pros.iterrows():
             confidence = safe_percent(
-                row.get("confidence_pct")
+                row["confidence_pct"]
             )
 
             pro_data.append(
                 [
                     Paragraph(
-                        f"<b>{clean_text(row.get('rule_id'))}</b>",
+                        f"<b>{clean_text(row['rule_id'])}</b>",
                         styles["signal"],
                     ),
                     Paragraph(
-                        clean_text(row.get("text")),
+                        clean_text(row["text"]),
                         styles["signal"],
                     ),
                     Paragraph(
@@ -758,17 +1187,17 @@ def make_pros_cons(signals, styles):
 
         for _, row in cons.iterrows():
             confidence = safe_percent(
-                row.get("confidence_pct")
+                row["confidence_pct"]
             )
 
             con_data.append(
                 [
                     Paragraph(
-                        f"<b>{clean_text(row.get('rule_id'))}</b>",
+                        f"<b>{clean_text(row['rule_id'])}</b>",
                         styles["signal"],
                     ),
                     Paragraph(
-                        clean_text(row.get("text")),
+                        clean_text(row["text"]),
                         styles["signal"],
                     ),
                     Paragraph(
@@ -832,6 +1261,7 @@ def make_capital_allocation_section(
                 styles["body"],
             )
         )
+
         return elements
 
     latest = latest_row(cashflow_rows)
@@ -842,25 +1272,11 @@ def make_capital_allocation_section(
         )
     )
 
-    if pattern == "N/A":
-        pattern = clean_text(
-            latest.get(
-                "capital_allocation_label"
-            )
-        )
-
     fcf = safe_number(
         latest.get(
             "free_cash_flow_calculated_cr"
         )
     )
-
-    if fcf == "N/A":
-        fcf = safe_number(
-            latest.get(
-                "free_cash_flow_cr"
-            )
-        )
 
     capex = safe_number(
         latest.get("capex_cr")
@@ -920,73 +1336,44 @@ def make_capital_allocation_section(
     return elements
 
 
-def generate_tearsheet(
+# ============================================================
+# FALLBACK TEARSHEET
+# ============================================================
+
+def generate_unavailable_tearsheet(
     company_id,
-    sources,
+    company,
+    market,
+    signals,
+    cagr,
+    cashflow,
+    output_file,
 ):
-    """Generate a two-page company tearsheet."""
+    """Generate a two-page tearsheet when ratio data is unavailable."""
 
-    data = get_company_data(
-        company_id,
-        sources,
-    )
-
-    company_rows = data["company"]
-    ratios = data["ratios"]
-    market = data["market"]
-    signals = data["signals"]
-    cagr = data["cagr"]
-    cashflow = data["cashflow"]
-
-    if company_rows.empty:
-        print(
-            f"Skipping {company_id}: company data not found"
-        )
-        return False
-
-    if ratios.empty:
-        print(
-            f"Skipping {company_id}: ratio data not found"
-        )
-        return False
-
-    latest = latest_row(ratios)
-    market_latest = latest_row(market)
-
-    cagr_latest = None
-
-    if not cagr.empty:
-        cagr["_latest_year_date"] = cagr[
-            "latest_year"
-        ].apply(parse_year_value)
-
-        cagr = cagr.sort_values(
-            "_latest_year_date",
-            na_position="last",
-        )
-
-        cagr_latest = cagr.iloc[-1]
-
-    company = company_rows.iloc[0]
+    styles = make_styles()
 
     company_name = clean_text(
         company.get("company_name")
     )
 
-    safe_company_id = re.sub(
-        r"[^A-Za-z0-9_-]+",
-        "_",
-        str(company_id),
+    market_latest = latest_row(market)
+
+    cagr_latest = None
+
+    if not cagr.empty:
+        cagr_latest = cagr.iloc[-1]
+
+    availability_chart = create_data_availability_chart(
+        company_id,
+        market,
+        cagr,
+        cashflow,
     )
 
-    OUTPUT_DIR.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    output_file = (
-        OUTPUT_DIR
-        / f"{safe_company_id}_tearsheet.pdf"
+    valuation_chart = create_market_chart(
+        market,
+        company_id,
     )
 
     doc = SimpleDocTemplate(
@@ -998,39 +1385,16 @@ def generate_tearsheet(
         bottomMargin=14 * mm,
     )
 
-    styles = make_styles()
-
     story = []
-    chart_file = create_trend_chart(
-    ratios,
-    company_id,
-)
 
-    # =========================================================
+    # ---------------------------------------------------------
     # PAGE 1
-    # =========================================================
+    # ---------------------------------------------------------
 
     story.append(
         Paragraph(
             company_name,
             styles["title"],
-        )
-    )
-    if chart_file is not None:
-        from reportlab.platypus import Image
-
-    story.append(
-        Spacer(
-            1,
-            4 * mm,
-        )
-    )
-
-    story.append(
-        Image(
-            str(chart_file),
-            width=170 * mm,
-            height=68 * mm,
         )
     )
 
@@ -1043,38 +1407,25 @@ def generate_tearsheet(
 
     story.append(
         Paragraph(
-            "Key Financial Indicators",
+            "Financial Data Availability",
             styles["section"],
-        )
-    )
-
-    story.append(
-        make_kpi_table(
-            latest,
-            market_latest,
-            cagr_latest,
-            company,
-        )
-    )
-
-    story.append(
-        Spacer(
-            1,
-            7 * mm,
         )
     )
 
     story.append(
         Paragraph(
-            "10-Year Available Financial Trend",
-            styles["section"],
+            "This company is included in the N100 company master "
+            "dataset, but the supplied source package does not "
+            "contain the financial-ratio records required for a "
+            "standard KPI tearsheet.",
+            styles["body"],
         )
     )
 
     story.append(
-        make_trend_table(
-            ratios,
-            company,
+        make_unavailable_table(
+            "Financial ratio source records are unavailable "
+            "for this company."
         )
     )
 
@@ -1085,33 +1436,210 @@ def generate_tearsheet(
         )
     )
 
+    if availability_chart is not None:
+        story.append(
+            Image(
+                str(availability_chart),
+                width=170 * mm,
+                height=70 * mm,
+            )
+        )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    supporting_data = [
+        [
+            "Company master",
+            "Available",
+        ],
+        [
+            "Market-cap history",
+            "Available"
+            if not market.empty
+            else "Unavailable",
+        ],
+        [
+            "CAGR analysis",
+            "Available"
+            if not cagr.empty
+            else "Unavailable",
+        ],
+        [
+            "Cash-flow intelligence",
+            "Available"
+            if not cashflow.empty
+            else "Unavailable",
+        ],
+    ]
+
+    supporting_table = Table(
+        supporting_data,
+        colWidths=[
+            70 * mm,
+            100 * mm,
+        ],
+    )
+
+    supporting_table.setStyle(
+        TableStyle(
+            [
+                (
+                    "GRID",
+                    (0, 0),
+                    (-1, -1),
+                    0.35,
+                    colors.lightgrey,
+                ),
+                (
+                    "FONTNAME",
+                    (0, 0),
+                    (0, -1),
+                    "Helvetica-Bold",
+                ),
+                (
+                    "VALIGN",
+                    (0, 0),
+                    (-1, -1),
+                    "TOP",
+                ),
+            ]
+        )
+    )
+
     story.append(
         Paragraph(
-            "Data Availability Note",
+            "Available Supporting Data",
             styles["section"],
         )
     )
 
     story.append(
+        supporting_table
+    )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
+        )
+    )
+
+    valuation_data = [
+        [
+            "P/E",
+            safe_number(
+                market_latest.get("pe_ratio")
+                if market_latest is not None
+                else pd.NA
+            ),
+        ],
+        [
+            "P/B",
+            safe_number(
+                market_latest.get("pb_ratio")
+                if market_latest is not None
+                else pd.NA
+            ),
+        ],
+        [
+            "EV / EBITDA",
+            safe_number(
+                market_latest.get("ev_ebitda")
+                if market_latest is not None
+                else pd.NA
+            ),
+        ],
+        [
+            "Dividend Yield",
+            safe_percent(
+                market_latest.get("dividend_yield_pct")
+                if market_latest is not None
+                else pd.NA
+            ),
+        ],
+        [
+            "EPS CAGR 5Y",
+            safe_percent(
+                cagr_latest.get(
+                    "eps_cagr_5yr_pct"
+                )
+                if cagr_latest is not None
+                else pd.NA
+            ),
+        ],
+    ]
+
+    valuation_table = Table(
+        valuation_data,
+        colWidths=[
+            70 * mm,
+            100 * mm,
+        ],
+    )
+
+    valuation_table.setStyle(
+        TableStyle(
+            [
+                (
+                    "GRID",
+                    (0, 0),
+                    (-1, -1),
+                    0.35,
+                    colors.lightgrey,
+                ),
+                (
+                    "FONTNAME",
+                    (0, 0),
+                    (0, -1),
+                    "Helvetica-Bold",
+                ),
+            ]
+        )
+    )
+
+    story.append(
         Paragraph(
-            "Revenue, absolute net profit/PAT, balance-sheet "
-            "history, and complete investing/financing "
-            "cash-flow data are not available in the supplied "
-            "source files. These metrics are therefore not "
+            "Available Valuation Information",
+            styles["section"],
+        )
+    )
+
+    story.append(
+        valuation_table
+    )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Important: missing financial fields are explicitly "
+            "shown as unavailable. No financial values are "
             "estimated or fabricated.",
             styles["body"],
         )
     )
 
-    story.append(PageBreak())
+    story.append(
+        PageBreak()
+    )
 
-    # =========================================================
+    # ---------------------------------------------------------
     # PAGE 2
-    # =========================================================
+    # ---------------------------------------------------------
 
     story.append(
         Paragraph(
-            "Pros, Cons & Capital Allocation",
+            "Pros, Cons & Cash-Flow Availability",
             styles["title"],
         )
     )
@@ -1126,7 +1654,7 @@ def generate_tearsheet(
     story.append(
         Spacer(
             1,
-            5 * mm,
+            4 * mm,
         )
     )
 
@@ -1140,7 +1668,30 @@ def generate_tearsheet(
     story.append(
         Spacer(
             1,
-            5 * mm,
+            4 * mm,
+        )
+    )
+
+    if valuation_chart is not None:
+        story.append(
+            Paragraph(
+                "Available Valuation Trend",
+                styles["section"],
+            )
+        )
+
+        story.append(
+            Image(
+                str(valuation_chart),
+                width=170 * mm,
+                height=68 * mm,
+            )
+        )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
         )
     )
 
@@ -1154,7 +1705,8 @@ def generate_tearsheet(
     if cashflow.empty:
         story.append(
             Paragraph(
-                "Cash-flow intelligence unavailable.",
+                "Cash-flow intelligence unavailable in the "
+                "current source package.",
                 styles["body"],
             )
         )
@@ -1163,61 +1715,43 @@ def generate_tearsheet(
             cashflow
         )
 
-        cfo_value = cash_latest.get(
-            "cash_from_operations_cr"
-        )
-
-        capex_value = cash_latest.get(
-            "capex_cr"
-        )
-
-        fcf_value = cash_latest.get(
-            "free_cash_flow_calculated_cr"
-        )
-
-        if pd.isna(fcf_value):
-            fcf_value = cash_latest.get(
-                "free_cash_flow_cr"
-            )
-
-        distress_status = cash_latest.get(
-            "distress_status"
-        )
-
-        if pd.isna(distress_status):
-            distress_status = cash_latest.get(
-                "distress_flag"
-            )
-
-        deleveraging_status = cash_latest.get(
-            "deleveraging_status"
-        )
-
-        if pd.isna(deleveraging_status):
-            deleveraging_status = cash_latest.get(
-                "deleveraging_flag"
-            )
-
         cash_data = [
             [
                 "CFO",
-                f"{safe_number(cfo_value)} Cr",
+                (
+                    f"{safe_number(cash_latest.get('cash_from_operations_cr'))} "
+                    "Cr"
+                ),
             ],
             [
                 "CapEx",
-                f"{safe_number(capex_value)} Cr",
+                (
+                    f"{safe_number(cash_latest.get('capex_cr'))} "
+                    "Cr"
+                ),
             ],
             [
                 "FCF",
-                f"{safe_number(fcf_value)} Cr",
+                (
+                    f"{safe_number(cash_latest.get('free_cash_flow_calculated_cr'))} "
+                    "Cr"
+                ),
             ],
             [
                 "Distress Rule",
-                clean_text(distress_status),
+                clean_text(
+                    cash_latest.get(
+                        "distress_status"
+                    )
+                ),
             ],
             [
                 "Deleveraging Rule",
-                clean_text(deleveraging_status),
+                clean_text(
+                    cash_latest.get(
+                        "deleveraging_status"
+                    )
+                ),
             ],
         ]
 
@@ -1262,7 +1796,473 @@ def generate_tearsheet(
     story.append(
         Spacer(
             1,
-            5 * mm,
+            4 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Report Limitation",
+            styles["section"],
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "This fallback tearsheet exists to maintain complete "
+            "company-level report coverage while preserving data "
+            "integrity. It does not imply that unavailable "
+            "financial records exist. Analysts should obtain the "
+            "missing source records before performing a complete "
+            "financial assessment.",
+            styles["body"],
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Generated by N100 Financial Intelligence Platform",
+            styles["small"],
+        )
+    )
+
+    doc.build(
+        story
+    )
+
+    if availability_chart is not None:
+        availability_chart.unlink(
+            missing_ok=True
+        )
+
+    if valuation_chart is not None:
+        valuation_chart.unlink(
+            missing_ok=True
+        )
+
+    return True
+
+
+# ============================================================
+# NORMAL TEARSHEET
+# ============================================================
+
+def generate_tearsheet(
+    company_id,
+    sources,
+):
+    """Generate a two-page company tearsheet."""
+
+    data = get_company_data(
+        company_id,
+        sources,
+    )
+
+    company_rows = data["company"]
+    ratios = data["ratios"]
+    market = data["market"]
+    signals = data["signals"]
+    cagr = data["cagr"]
+    cashflow = data["cashflow"]
+
+    if company_rows.empty:
+        print(
+            f"Skipping {company_id}: company data not found"
+        )
+
+        return False
+
+    company = company_rows.iloc[0]
+
+    company_name = clean_text(
+        company.get("company_name")
+    )
+
+    safe_company_id = re.sub(
+        r"[^A-Za-z0-9_-]+",
+        "_",
+        str(company_id),
+    )
+
+    OUTPUT_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    output_file = (
+        OUTPUT_DIR
+        / f"{safe_company_id}_tearsheet.pdf"
+    )
+
+    # ---------------------------------------------------------
+    # FALLBACK FOR COMPANIES WITHOUT RATIO DATA
+    # ---------------------------------------------------------
+
+    if ratios.empty:
+        print(
+            f"Generating data-unavailable tearsheet for {company_id}: "
+            "ratio data not found"
+        )
+
+        return generate_unavailable_tearsheet(
+            company_id,
+            company,
+            market,
+            signals,
+            cagr,
+            cashflow,
+            output_file,
+        )
+
+    latest = latest_row(ratios)
+    market_latest = latest_row(market)
+
+    cagr_latest = None
+
+    if not cagr.empty:
+        cagr = cagr.copy()
+
+        cagr["_latest_year_date"] = cagr[
+            "latest_year"
+        ].apply(
+            lambda value: pd.to_datetime(
+                value,
+                errors="coerce",
+            )
+        )
+
+        cagr = cagr.sort_values(
+            "_latest_year_date",
+            na_position="last",
+        )
+
+        cagr_latest = cagr.iloc[-1]
+
+    trend_chart = create_trend_chart(
+        ratios,
+        company_id,
+    )
+
+    fcf_chart = create_fcf_chart(
+        cashflow,
+        company_id,
+    )
+
+    valuation_chart = create_market_chart(
+        market,
+        company_id,
+    )
+
+    doc = SimpleDocTemplate(
+        str(output_file),
+        pagesize=A4,
+        rightMargin=15 * mm,
+        leftMargin=15 * mm,
+        topMargin=14 * mm,
+        bottomMargin=14 * mm,
+    )
+
+    styles = make_styles()
+
+    story = []
+
+    # =========================================================
+    # PAGE 1
+    # =========================================================
+
+    story.append(
+        Paragraph(
+            company_name,
+            styles["title"],
+        )
+    )
+
+    story.append(
+        Paragraph(
+            f"{company_id} | N100 Financial Intelligence Platform",
+            styles["subtitle"],
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Key Financial Indicators",
+            styles["section"],
+        )
+    )
+
+    story.append(
+        make_kpi_table(
+            latest,
+            market_latest,
+            cagr_latest,
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Historical Profitability & Return Trend",
+            styles["section"],
+        )
+    )
+
+    if trend_chart is not None:
+        story.append(
+            Image(
+                str(trend_chart),
+                width=170 * mm,
+                height=68 * mm,
+            )
+        )
+    else:
+        story.append(
+            make_trend_table(
+                ratios
+            )
+        )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Historical Data Table",
+            styles["section"],
+        )
+    )
+
+    story.append(
+        make_trend_table(
+            ratios
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Data Availability Note",
+            styles["section"],
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Revenue, absolute net profit/PAT, balance-sheet "
+            "history, and complete investing/financing "
+            "cash-flow data are not available in the supplied "
+            "source files. These metrics are therefore not "
+            "estimated or fabricated.",
+            styles["body"],
+        )
+    )
+
+    story.append(
+        PageBreak()
+    )
+
+    # =========================================================
+    # PAGE 2
+    # =========================================================
+
+    story.append(
+        Paragraph(
+            "Pros, Cons & Capital Allocation",
+            styles["title"],
+        )
+    )
+
+    story.extend(
+        make_pros_cons(
+            signals,
+            styles,
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
+        )
+    )
+
+    story.extend(
+        make_capital_allocation_section(
+            cashflow,
+            styles,
+        )
+    )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
+        )
+    )
+
+    if fcf_chart is not None:
+        story.append(
+            Paragraph(
+                "Cash-Flow Trend",
+                styles["section"],
+            )
+        )
+
+        story.append(
+            Image(
+                str(fcf_chart),
+                width=170 * mm,
+                height=65 * mm,
+            )
+        )
+
+    elif valuation_chart is not None:
+        story.append(
+            Paragraph(
+                "Historical Valuation Trend",
+                styles["section"],
+            )
+        )
+
+        story.append(
+            Image(
+                str(valuation_chart),
+                width=170 * mm,
+                height=65 * mm,
+            )
+        )
+
+    story.append(
+        Spacer(
+            1,
+            3 * mm,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            "Cash-Flow Intelligence",
+            styles["section"],
+        )
+    )
+
+    if cashflow.empty:
+        story.append(
+            Paragraph(
+                "Cash-flow intelligence unavailable.",
+                styles["body"],
+            )
+        )
+    else:
+        cash_latest = latest_row(
+            cashflow
+        )
+
+        cash_data = [
+            [
+                "CFO",
+                (
+                    f"{safe_number(cash_latest.get('cash_from_operations_cr'))} "
+                    "Cr"
+                ),
+            ],
+            [
+                "CapEx",
+                (
+                    f"{safe_number(cash_latest.get('capex_cr'))} "
+                    "Cr"
+                ),
+            ],
+            [
+                "FCF",
+                (
+                    f"{safe_number(cash_latest.get('free_cash_flow_calculated_cr'))} "
+                    "Cr"
+                ),
+            ],
+            [
+                "Distress Rule",
+                clean_text(
+                    cash_latest.get(
+                        "distress_status"
+                    )
+                ),
+            ],
+            [
+                "Deleveraging Rule",
+                clean_text(
+                    cash_latest.get(
+                        "deleveraging_status"
+                    )
+                ),
+            ],
+        ]
+
+        cash_table = Table(
+            cash_data,
+            colWidths=[
+                50 * mm,
+                120 * mm,
+            ],
+        )
+
+        cash_table.setStyle(
+            TableStyle(
+                [
+                    (
+                        "GRID",
+                        (0, 0),
+                        (-1, -1),
+                        0.35,
+                        colors.lightgrey,
+                    ),
+                    (
+                        "FONTNAME",
+                        (0, 0),
+                        (0, -1),
+                        "Helvetica-Bold",
+                    ),
+                    (
+                        "VALIGN",
+                        (0, 0),
+                        (-1, -1),
+                        "TOP",
+                    ),
+                ]
+            )
+        )
+
+        story.append(
+            cash_table
+        )
+
+    story.append(
+        Spacer(
+            1,
+            4 * mm,
         )
     )
 
@@ -1286,7 +2286,7 @@ def generate_tearsheet(
     story.append(
         Spacer(
             1,
-            5 * mm,
+            2 * mm,
         )
     )
 
@@ -1297,10 +2297,30 @@ def generate_tearsheet(
         )
     )
 
-    doc.build(story)
+    doc.build(
+        story
+    )
+
+    # ---------------------------------------------------------
+    # Remove temporary chart files
+    # ---------------------------------------------------------
+
+    for chart_file in [
+        trend_chart,
+        fcf_chart,
+        valuation_chart,
+    ]:
+        if chart_file is not None:
+            chart_file.unlink(
+                missing_ok=True
+            )
 
     return True
 
+
+# ============================================================
+# BATCH GENERATION
+# ============================================================
 
 def main():
     """Generate tearsheets for all companies."""
